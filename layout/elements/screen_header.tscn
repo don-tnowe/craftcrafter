@@ -1,11 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[sub_resource type="Gradient" id=1]
-colors = PoolColorArray( 0, 0, 0, 0.270588, 0, 0, 0, 0 )
-
-[sub_resource type="GradientTexture" id=2]
-gradient = SubResource( 1 )
-width = 64
+[ext_resource path="res://styles/elements/shadow_gradient.tres" type="Texture" id=1]
+[ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=2]
 
 [node name="header" type="Control"]
 anchor_right = 1.0
@@ -31,12 +27,16 @@ anchor_bottom = 1.0
 margin_right = 24.0
 margin_bottom = 2560.0
 rect_rotation = 89.9999
-texture = SubResource( 2 )
+texture = ExtResource( 1 )
 expand = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="box" type="HBoxContainer" parent="color_rect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/separation = 0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -46,11 +46,12 @@ margin_right = 128.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 128, 0 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "<"
 
 [node name="control" type="Control" parent="color_rect/box"]
-margin_left = 132.0
-margin_right = 588.0
+margin_left = 128.0
+margin_right = 592.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 0, 128 )
 rect_clip_content = true
@@ -60,6 +61,8 @@ size_flags_horizontal = 3
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "Title"
 valign = 1
 
@@ -69,4 +72,5 @@ margin_right = 720.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 128, 0 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
 text = "?"

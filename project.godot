@@ -27,6 +27,7 @@ window/stretch/aspect="expand"
 [gui]
 
 theme/custom="res://styles/themes/default_theme.tres"
+theme/custom_font="res://styles/fonts/body.tres"
 
 [input_devices]
 
