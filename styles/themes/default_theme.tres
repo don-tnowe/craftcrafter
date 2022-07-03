@@ -1,0 +1,139 @@
+[gd_resource type="Theme" load_steps=14 format=2]
+
+[ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=1]
+[ext_resource path="res://styles/elements/Elements.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxTexture" id=15]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxTexture" id=16]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.980392, 0.796078, 0.435294, 1 )
+
+[sub_resource type="StyleBoxTexture" id=1]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.968627, 0.686275, 0.133333, 1 )
+
+[sub_resource type="StyleBoxTexture" id=24]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.470588, 0.231373, 0.0666667, 1 )
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.247059, 0.247059, 0.247059, 0.498039 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 0 )
+border_blend = true
+expand_margin_top = 16.0
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 2 )
+region_rect = Rect2( 214, 0, 64, 64 )
+margin_left = 16.0
+margin_right = 16.0
+margin_top = 16.0
+margin_bottom = 16.0
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.968627, 0.686275, 0.133333, 1 )
+corner_detail = 1
+
+[sub_resource type="StyleBoxTexture" id=18]
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 342, 0, 64, 64 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.247059, 0.247059, 0.247059, 0.498039 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 0 )
+border_blend = true
+expand_margin_left = 16.0
+
+[resource]
+default_font = ExtResource( 1 )
+Button/colors/font_color = Color( 1, 1, 1, 1 )
+Button/colors/font_color_disabled = Color( 1, 1, 1, 0.2 )
+Button/colors/font_color_focus = Color( 1, 1, 1, 1 )
+Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 0.74902 )
+Button/constants/hseparation = 2
+Button/styles/disabled = SubResource( 15 )
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 16 )
+Button/styles/normal = SubResource( 1 )
+Button/styles/pressed = SubResource( 24 )
+HScrollBar/styles/grabber = SubResource( 25 )
+HScrollBar/styles/grabber_highlight = SubResource( 25 )
+HScrollBar/styles/grabber_pressed = SubResource( 25 )
+HScrollBar/styles/scroll = SubResource( 4 )
+HScrollBar/styles/scroll_focus = SubResource( 4 )
+LineEdit/colors/cursor_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_selected = Color( 0, 0, 0, 1 )
+LineEdit/colors/font_color_uneditable = Color( 0, 0, 0, 1 )
+LineEdit/styles/focus = SubResource( 7 )
+LineEdit/styles/normal = SubResource( 7 )
+LineEdit/styles/read_only = SubResource( 7 )
+Panel/styles/panel = SubResource( 23 )
+TextEdit/styles/focus = SubResource( 7 )
+TextEdit/styles/normal = SubResource( 7 )
+TextEdit/styles/read_only = SubResource( 7 )
+ToolButton/colors/font_color = Color( 1, 1, 1, 1 )
+ToolButton/colors/font_color_disabled = Color( 1, 1, 1, 0.247059 )
+ToolButton/colors/font_color_pressed = Color( 1, 1, 1, 0.74902 )
+ToolButton/styles/normal = SubResource( 18 )
+VScrollBar/styles/grabber = SubResource( 3 )
+VScrollBar/styles/grabber_highlight = SubResource( 3 )
+VScrollBar/styles/grabber_pressed = SubResource( 3 )
+VScrollBar/styles/scroll = SubResource( 4 )
+VScrollBar/styles/scroll_focus = SubResource( 4 )
