@@ -1,14 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://layout/elements/transmutation_list_item.tscn" type="PackedScene" id=1]
 [ext_resource path="res://styles/themes/stylebox_float_button.tres" type="StyleBox" id=2]
 [ext_resource path="res://styles/icons/add.tres" type="Texture" id=3]
 [ext_resource path="res://styles/icons/search.tres" type="Texture" id=4]
 [ext_resource path="res://styles/elements/shadow_gradient.tres" type="Texture" id=5]
+[ext_resource path="res://styles/themes/default_theme.tres" type="Theme" id=6]
 
 [node name="screen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 6 )
 
 [node name="scroll_container" type="ScrollContainer" parent="."]
 anchor_right = 1.0
@@ -22,7 +24,8 @@ __meta__ = {
 
 [node name="v_box_container" type="VBoxContainer" parent="scroll_container"]
 margin_right = 715.0
-margin_bottom = 2504.0
+margin_bottom = 2610.0
+custom_constants/separation = 0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -30,18 +33,19 @@ __meta__ = {
 [node name="margin_container" parent="scroll_container/v_box_container" instance=ExtResource( 1 )]
 margin_left = 0.0
 margin_right = 715.65
+margin_bottom = 870.0
 
 [node name="margin_container2" parent="scroll_container/v_box_container" instance=ExtResource( 1 )]
 margin_left = 0.0
-margin_top = 836.0
+margin_top = 870.0
 margin_right = 715.65
-margin_bottom = 1668.0
+margin_bottom = 1740.0
 
 [node name="margin_container3" parent="scroll_container/v_box_container" instance=ExtResource( 1 )]
 margin_left = 0.0
-margin_top = 1672.0
+margin_top = 1740.0
 margin_right = 715.65
-margin_bottom = 2504.0
+margin_bottom = 2610.0
 
 [node name="shadow" type="TextureRect" parent="."]
 anchor_top = 1.0
