@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/elements/common/screen_switch_button.gd" type="Script" id=1]
+[ext_resource path="res://styles/fonts/button.tres" type="DynamicFont" id=2]
+
+[node name="button" type="Button"]
+margin_right = 192.0
+margin_bottom = 86.0
+mouse_filter = 1
+custom_fonts/font = ExtResource( 2 )
+text = "BUTTON"
+script = ExtResource( 1 )

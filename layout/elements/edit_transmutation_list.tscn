@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://styles/themes/stylebox_panel.tres" type="StyleBox" id=1]
 [ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=2]
 [ext_resource path="res://layout/elements/edit_transmutation_entity.tscn" type="PackedScene" id=3]
+[ext_resource path="res://layout/elements/common/basic_screen_switch_button.tscn" type="PackedScene" id=4]
 
 [node name="list" type="MarginContainer"]
 margin_right = 720.0
@@ -71,13 +72,12 @@ margin_bottom = 496.0
 [node name="margin_container" type="MarginContainer" parent="v_box_container"]
 margin_top = 592.0
 margin_right = 680.0
-margin_bottom = 718.0
+margin_bottom = 737.0
 mouse_filter = 2
 
-[node name="button" type="Button" parent="v_box_container/margin_container"]
+[node name="button2" parent="v_box_container/margin_container" instance=ExtResource( 4 )]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 660.0
-margin_bottom = 106.0
-mouse_filter = 1
+margin_bottom = 125.0
 text = "ADD ITEM"

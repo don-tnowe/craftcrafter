@@ -12,6 +12,9 @@ func _ready() -> void:
 	
 	while true:
 		cur_parent = cur_parent.get_parent()
+		if !is_instance_valid(cur_parent):
+			return
+
 		if cur_parent.has_method("get_switch_extra_from_tag"):
 			screen = cur_parent
 			break
@@ -19,9 +22,6 @@ func _ready() -> void:
 		if cur_parent.has_method("switch_screen"):
 			screen_switcher = cur_parent
 			break
-
-		if !is_instance_valid(cur_parent):
-			return
 
 	if connect("pressed", self, "_on_pressed") != OK:
 		return
