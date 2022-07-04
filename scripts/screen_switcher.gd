@@ -8,17 +8,21 @@ var can_change_screen := true
 
 
 func _ready() -> void:
-	$"header/color_rect/box/back".connect("pressed", self, "_on_back_pressed")
+	if $"header/color_rect/box/back".connect("pressed", self, "_on_back_pressed") != OK: 
+		return
+
+	get_tree().set_quit_on_go_back(false)
 
 
 func switch_screen(scene_path : String, extra = null) -> void:
-	if !can_change_screen: return
+	if !can_change_screen:
+		return
 
 	var bottom_node = node_frame.get_child(node_frame.get_child_count() - 1)
 	var top_node = load(scene_path).instance()
 	
 	node_frame.add_child(top_node)
-	
+
 	if top_node.has_method("open_screen"):
 		top_node.open_screen(extra)
 	
@@ -26,8 +30,11 @@ func switch_screen(scene_path : String, extra = null) -> void:
 		
 
 func _on_back_pressed() -> void:
-	if !can_change_screen: return
-	if node_frame.get_child_count() <= 2: return
+	if !can_change_screen:
+		node_anim.advance(10.0)
+
+	if node_frame.get_child_count() <= 2: 
+		get_tree().quit()
 
 	var bottom_node = node_frame.get_child(node_frame.get_child_count() - 2)
 	var top_node = node_frame.get_child(node_frame.get_child_count() - 1)
@@ -59,4 +66,9 @@ func start_animation(name : String, bottom_node_path_str : String, top_node_path
 func _on_anim_animation_finished(anim_name) -> void:
 	can_change_screen = true
 	if anim_name == "close_screen":
-		node_frame.get_child(node_frame.get_child_count() - 1).queue_free()
+		node_frame.get_child(node_frame.get_child_count() - 1).free()
+
+
+func _notification(what) -> void:
+	if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
+		_on_back_pressed()
