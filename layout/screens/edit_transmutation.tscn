@@ -6,31 +6,35 @@
 [ext_resource path="res://layout/elements/meta_edit.tscn" type="PackedScene" id=4]
 [ext_resource path="res://styles/icons/time.tres" type="Texture" id=6]
 
-[node name="screen" type="VBoxContainer"]
+[node name="screen" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="v_box_container" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
 custom_constants/separation = 0
 
-[node name="pinned" type="Panel" parent="."]
+[node name="pinned" type="Panel" parent="v_box_container"]
 margin_right = 720.0
 margin_bottom = 277.0
 rect_min_size = Vector2( 0, 277 )
 mouse_filter = 1
 custom_styles/panel = ExtResource( 3 )
 
-[node name="margin_container" type="MarginContainer" parent="pinned"]
+[node name="margin_container" type="MarginContainer" parent="v_box_container/pinned"]
 margin_right = 720.0
 margin_bottom = 277.0
 mouse_filter = 1
 
-[node name="v_box_container" type="VBoxContainer" parent="pinned/margin_container"]
+[node name="v_box_container" type="VBoxContainer" parent="v_box_container/pinned/margin_container"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 700.0
 margin_bottom = 257.0
 
-[node name="name" type="LineEdit" parent="pinned/margin_container/v_box_container"]
+[node name="name" type="LineEdit" parent="v_box_container/pinned/margin_container/v_box_container"]
 margin_right = 680.0
 margin_bottom = 54.0
 mouse_filter = 1
@@ -41,7 +45,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="time_spent" type="HBoxContainer" parent="pinned/margin_container/v_box_container"]
+[node name="time_spent" type="HBoxContainer" parent="v_box_container/pinned/margin_container/v_box_container"]
 margin_top = 66.0
 margin_right = 680.0
 margin_bottom = 120.0
@@ -49,7 +53,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="icon" type="Control" parent="pinned/margin_container/v_box_container/time_spent"]
+[node name="icon" type="Control" parent="v_box_container/pinned/margin_container/v_box_container/time_spent"]
 margin_right = 80.0
 margin_bottom = 54.0
 rect_min_size = Vector2( 80, 0 )
@@ -58,7 +62,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="icon" type="TextureRect" parent="pinned/margin_container/v_box_container/time_spent/icon"]
+[node name="icon" type="TextureRect" parent="v_box_container/pinned/margin_container/v_box_container/time_spent/icon"]
 self_modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
@@ -72,7 +76,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="min" type="LineEdit" parent="pinned/margin_container/v_box_container/time_spent"]
+[node name="min" type="LineEdit" parent="v_box_container/pinned/margin_container/v_box_container/time_spent"]
 margin_left = 92.0
 margin_right = 361.0
 margin_bottom = 54.0
@@ -86,7 +90,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="label" type="Label" parent="pinned/margin_container/v_box_container/time_spent"]
+[node name="label" type="Label" parent="v_box_container/pinned/margin_container/v_box_container/time_spent"]
 margin_left = 373.0
 margin_top = 8.0
 margin_right = 398.0
@@ -97,7 +101,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="max" type="LineEdit" parent="pinned/margin_container/v_box_container/time_spent"]
+[node name="max" type="LineEdit" parent="v_box_container/pinned/margin_container/v_box_container/time_spent"]
 margin_left = 410.0
 margin_right = 680.0
 margin_bottom = 54.0
@@ -111,14 +115,14 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="button" type="Button" parent="pinned/margin_container/v_box_container"]
+[node name="button" type="Button" parent="v_box_container/pinned/margin_container/v_box_container"]
 margin_top = 132.0
 margin_right = 680.0
 margin_bottom = 237.0
 mouse_filter = 1
 text = "GENERATE TREE"
 
-[node name="scroll_container" type="ScrollContainer" parent="."]
+[node name="scroll_container" type="ScrollContainer" parent="v_box_container"]
 show_behind_parent = true
 margin_top = 277.0
 margin_right = 720.0
@@ -127,83 +131,83 @@ size_flags_vertical = 3
 scroll_horizontal_enabled = false
 scroll_deadzone = 32
 
-[node name="v_box_container" type="VBoxContainer" parent="scroll_container"]
+[node name="v_box_container" type="VBoxContainer" parent="v_box_container/scroll_container"]
 margin_right = 720.0
 margin_bottom = 3226.0
 size_flags_horizontal = 3
 custom_constants/separation = 0
 
-[node name="consumed" parent="scroll_container/v_box_container" instance=ExtResource( 2 )]
+[node name="consumed" parent="v_box_container/scroll_container/v_box_container" instance=ExtResource( 2 )]
 margin_bottom = 777.0
 mouse_filter = 1
 
-[node name="panel" parent="scroll_container/v_box_container/consumed" index="0"]
+[node name="panel" parent="v_box_container/scroll_container/v_box_container/consumed" index="0"]
 margin_bottom = 757.0
 
-[node name="v_box_container" parent="scroll_container/v_box_container/consumed" index="1"]
+[node name="v_box_container" parent="v_box_container/scroll_container/v_box_container/consumed" index="1"]
 margin_bottom = 757.0
 
-[node name="color_rect" parent="scroll_container/v_box_container/consumed/v_box_container" index="0"]
+[node name="color_rect" parent="v_box_container/scroll_container/v_box_container/consumed/v_box_container" index="0"]
 color = Color( 0.968627, 0.329412, 0.133333, 1 )
 
-[node name="margin_container" parent="scroll_container/v_box_container/consumed/v_box_container" index="2"]
+[node name="margin_container" parent="v_box_container/scroll_container/v_box_container/consumed/v_box_container" index="2"]
 margin_bottom = 737.0
 
-[node name="button" parent="scroll_container/v_box_container/consumed/v_box_container/margin_container" index="0"]
+[node name="button" parent="v_box_container/scroll_container/v_box_container/consumed/v_box_container/margin_container" index="0"]
 margin_bottom = 125.0
 
-[node name="produced" parent="scroll_container/v_box_container" instance=ExtResource( 2 )]
+[node name="produced" parent="v_box_container/scroll_container/v_box_container" instance=ExtResource( 2 )]
 margin_top = 777.0
 margin_bottom = 1554.0
 mouse_filter = 1
 
-[node name="panel" parent="scroll_container/v_box_container/produced" index="0"]
+[node name="panel" parent="v_box_container/scroll_container/v_box_container/produced" index="0"]
 margin_bottom = 757.0
 
-[node name="v_box_container" parent="scroll_container/v_box_container/produced" index="1"]
+[node name="v_box_container" parent="v_box_container/scroll_container/v_box_container/produced" index="1"]
 margin_bottom = 757.0
 
-[node name="color_rect" parent="scroll_container/v_box_container/produced/v_box_container" index="0"]
+[node name="color_rect" parent="v_box_container/scroll_container/v_box_container/produced/v_box_container" index="0"]
 color = Color( 0.945098, 0.843137, 0.176471, 1 )
 
-[node name="label" parent="scroll_container/v_box_container/produced/v_box_container/color_rect" index="0"]
+[node name="label" parent="v_box_container/scroll_container/v_box_container/produced/v_box_container/color_rect" index="0"]
 text = "Produced"
 
-[node name="margin_container" parent="scroll_container/v_box_container/produced/v_box_container" index="2"]
+[node name="margin_container" parent="v_box_container/scroll_container/v_box_container/produced/v_box_container" index="2"]
 margin_bottom = 737.0
 
-[node name="button" parent="scroll_container/v_box_container/produced/v_box_container/margin_container" index="0"]
+[node name="button" parent="v_box_container/scroll_container/v_box_container/produced/v_box_container/margin_container" index="0"]
 margin_bottom = 125.0
 
-[node name="catalysts" parent="scroll_container/v_box_container" instance=ExtResource( 2 )]
+[node name="catalysts" parent="v_box_container/scroll_container/v_box_container" instance=ExtResource( 2 )]
 margin_top = 1554.0
 margin_bottom = 2331.0
 mouse_filter = 1
 
-[node name="panel" parent="scroll_container/v_box_container/catalysts" index="0"]
+[node name="panel" parent="v_box_container/scroll_container/v_box_container/catalysts" index="0"]
 margin_bottom = 757.0
 
-[node name="v_box_container" parent="scroll_container/v_box_container/catalysts" index="1"]
+[node name="v_box_container" parent="v_box_container/scroll_container/v_box_container/catalysts" index="1"]
 margin_bottom = 757.0
 
-[node name="color_rect" parent="scroll_container/v_box_container/catalysts/v_box_container" index="0"]
+[node name="color_rect" parent="v_box_container/scroll_container/v_box_container/catalysts/v_box_container" index="0"]
 color = Color( 0.447059, 0.784314, 0.27451, 1 )
 
-[node name="label" parent="scroll_container/v_box_container/catalysts/v_box_container/color_rect" index="0"]
+[node name="label" parent="v_box_container/scroll_container/v_box_container/catalysts/v_box_container/color_rect" index="0"]
 text = "Requirements"
 
-[node name="margin_container" parent="scroll_container/v_box_container/catalysts/v_box_container" index="2"]
+[node name="margin_container" parent="v_box_container/scroll_container/v_box_container/catalysts/v_box_container" index="2"]
 margin_bottom = 737.0
 
-[node name="button" parent="scroll_container/v_box_container/catalysts/v_box_container/margin_container" index="0"]
+[node name="button" parent="v_box_container/scroll_container/v_box_container/catalysts/v_box_container/margin_container" index="0"]
 margin_bottom = 125.0
 
-[node name="meta" parent="scroll_container/v_box_container" instance=ExtResource( 4 )]
+[node name="meta" parent="v_box_container/scroll_container/v_box_container" instance=ExtResource( 4 )]
 anchor_right = 0.0
 margin_top = 2331.0
 margin_right = 720.0
 margin_bottom = 3226.0
 
-[editable path="scroll_container/v_box_container/consumed"]
-[editable path="scroll_container/v_box_container/produced"]
-[editable path="scroll_container/v_box_container/catalysts"]
+[editable path="v_box_container/scroll_container/v_box_container/consumed"]
+[editable path="v_box_container/scroll_container/v_box_container/produced"]
+[editable path="v_box_container/scroll_container/v_box_container/catalysts"]

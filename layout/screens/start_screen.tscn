@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/screen_switch_button.gd" type="Script" id=1]
+
+[node name="screen" type="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -328.0
+margin_top = -43.0
+margin_right = 328.0
+margin_bottom = 43.0
+text = "START"
+script = ExtResource( 1 )
+button_tag = "start"
+switch_to_screen = "res://layout/screens/edit_transmutation.tscn"
