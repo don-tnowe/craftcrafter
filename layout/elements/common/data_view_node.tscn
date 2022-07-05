@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/elements/common/data_view_node.gd" type="Script" id=1]
+
+[node name="data_view_node" type="Node"]
+script = ExtResource( 1 )
+data_node_name_from_parent_name = true

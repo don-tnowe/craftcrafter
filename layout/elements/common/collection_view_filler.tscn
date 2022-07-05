@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/elements/common/collection_view_filler.gd" type="Script" id=1]
+
+[node name="collection_view_filler" type="Node"]
+script = ExtResource( 1 )

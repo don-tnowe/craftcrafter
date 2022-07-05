@@ -8,11 +8,25 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Button",
+"class": "EditValueButton",
+"language": "GDScript",
+"path": "res://scripts/elements/common/edit_value_button.gd"
+} ]
+_global_script_class_icons={
+"EditValueButton": ""
+}
+
 [application]
 
 config/name="Craft Crafter"
 run/main_scene="res://layout/main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+DataController="*res://scripts/data_controller.gd"
 
 [display]
 

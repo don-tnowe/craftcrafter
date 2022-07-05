@@ -10,7 +10,7 @@ var can_change_screen := true
 func _ready() -> void:
 	if $"header/color_rect/box/back".connect("pressed", self, "_on_back_pressed") != OK: 
 		return
-
+	
 	get_tree().set_quit_on_go_back(false)
 
 
@@ -21,11 +21,11 @@ func switch_screen(scene_path : String, extra = null) -> void:
 	var bottom_node = node_frame.get_child(node_frame.get_child_count() - 1)
 	var top_node = load(scene_path).instance()
 	
-	node_frame.add_child(top_node)
-
 	if top_node.has_method("open_screen"):
 		top_node.open_screen(extra)
 	
+	node_frame.add_child(top_node)
+
 	start_animation("open_screen", str(get_path_to(bottom_node)), str(get_path_to(top_node)))
 		
 

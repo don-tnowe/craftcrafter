@@ -8,6 +8,9 @@ var screen_switcher : Control
 
 
 func _ready() -> void:
+	if switch_to_screen == "":
+		return
+		
 	var cur_parent = self
 	
 	while true:
@@ -17,7 +20,6 @@ func _ready() -> void:
 
 		if cur_parent.has_method("get_switch_extra_from_tag"):
 			screen = cur_parent
-			break
 
 		if cur_parent.has_method("switch_screen"):
 			screen_switcher = cur_parent

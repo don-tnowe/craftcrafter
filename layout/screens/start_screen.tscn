@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scripts/screen_switch_button.gd" type="Script" id=1]
+[ext_resource path="res://scripts/elements/common/screen_switch_button.gd" type="Script" id=1]
+[ext_resource path="res://scripts/screens/screen_base.gd" type="Script" id=2]
 
 [node name="screen" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 2 )
+header_title = "screen_title_start"
 
 [node name="button" type="Button" parent="."]
 anchor_left = 0.5
@@ -18,4 +21,4 @@ margin_bottom = 43.0
 text = "START"
 script = ExtResource( 1 )
 button_tag = "start"
-switch_to_screen = "res://layout/screens/edit_transmutation.tscn"
+switch_to_screen = "res://layout/screens/transmutation_list.tscn"
