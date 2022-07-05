@@ -1,9 +1,13 @@
+class_name ScreenBase
 extends ColorRect
+
+signal returned_to_scene()
 
 export(String) var header_title = "screen_title_"
 export(Color) var header_color = Color.darkgray
 
 var screen_extra_data  # Variant
+
 
 func get_switch_extra_from_tag(button_tag : String):
 	return null
@@ -18,7 +22,7 @@ func close_screen() -> void:
 
 
 func reopen_screen(closed_screen_result) -> void:
-	pass
+	emit_signal("returned_to_scene")
 
 
 func get_result() -> void:

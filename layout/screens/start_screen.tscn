@@ -7,6 +7,9 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 header_title = "screen_title_start"
 
 [node name="button" type="Button" parent="."]
@@ -20,5 +23,8 @@ margin_right = 328.0
 margin_bottom = 43.0
 text = "START"
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 button_tag = "start"
 switch_to_screen = "res://layout/screens/transmutation_list.tscn"

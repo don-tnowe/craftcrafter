@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "EditValueButton",
 "language": "GDScript",
 "path": "res://scripts/elements/common/edit_value_button.gd"
+}, {
+"base": "ColorRect",
+"class": "ScreenBase",
+"language": "GDScript",
+"path": "res://scripts/screens/screen_base.gd"
 } ]
 _global_script_class_icons={
-"EditValueButton": ""
+"EditValueButton": "",
+"ScreenBase": ""
 }
 
 [application]
