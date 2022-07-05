@@ -1,3 +1,4 @@
+class_name EditValueBase
 extends ScreenBase
 
 export(Array, NodePath) var edit_elements
@@ -46,12 +47,15 @@ func update_edited_field(value : float) -> void:
 		node_edited_field.text = str(value)
 
 
-func _ready() -> void:
+func setup_properties() -> void:
 	for x in edit_elements:
 		var key = get_node(x).method_binds[0]
 		field_nodes[key] = get_node(x)
-		update_property(key, screen_extra_data[0][key])
-	
+		update_property(key, screen_extra_data[0].get(key, field_values[key]))
+
+
+func _ready() -> void:
+	setup_properties()
 	_on_select_field(screen_extra_data[1])
 
 

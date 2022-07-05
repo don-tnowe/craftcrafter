@@ -88,7 +88,7 @@ __meta__ = {
 margin_left = 92.0
 margin_right = 361.0
 data_node_name = "min"
-edit_screen = ""
+edit_screen = "res://layout/screens/edit_value/edit_value_time_range.tscn"
 
 [node name="label" type="Label" parent="v_box_container/pinned/margin_container/v_box_container/time"]
 margin_left = 373.0
@@ -105,7 +105,7 @@ __meta__ = {
 margin_left = 410.0
 margin_right = 680.0
 data_node_name = "max"
-edit_screen = ""
+edit_screen = "res://layout/screens/edit_value/edit_value_time_range.tscn"
 
 [node name="button" type="Button" parent="v_box_container/pinned/margin_container/v_box_container"]
 margin_top = 132.0

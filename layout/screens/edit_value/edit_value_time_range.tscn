@@ -1,0 +1,128 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://layout/screens/edit_value/edit_value_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://layout/elements/common/edit_action_button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://styles/themes/edit_button.tres" type="Theme" id=3]
+[ext_resource path="res://scripts/screens/edit_value_time_range.gd" type="Script" id=4]
+
+[node name="screen" instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+edit_elements = [ NodePath("grid_container/min_h"), NodePath("grid_container/min_m"), NodePath("grid_container/min_s"), NodePath("grid_container/max_h"), NodePath("grid_container/max_m"), NodePath("grid_container/max_s") ]
+
+[node name="grid_container" type="GridContainer" parent="." index="2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -296.0
+margin_top = 200.0
+margin_right = 296.0
+margin_bottom = 312.0
+mouse_filter = 2
+theme = ExtResource( 3 )
+columns = 3
+
+[node name="label" type="Label" parent="grid_container" index="0"]
+margin_right = 230.0
+margin_bottom = 38.0
+text = " Hours"
+align = 1
+
+[node name="label2" type="Label" parent="grid_container" index="1"]
+margin_left = 234.0
+margin_right = 358.0
+margin_bottom = 38.0
+text = " Minutes"
+align = 1
+
+[node name="label3" type="Label" parent="grid_container" index="2"]
+margin_left = 362.0
+margin_right = 592.0
+margin_bottom = 38.0
+text = " Seconds"
+align = 1
+
+[node name="min_h" parent="grid_container" index="3" instance=ExtResource( 2 )]
+margin_top = 42.0
+margin_right = 230.0
+margin_bottom = 96.0
+clip_text = true
+align = 2
+method_name = "_on_select_field"
+method_binds = [ "min_h" ]
+
+[node name="min_m" parent="grid_container" index="4" instance=ExtResource( 2 )]
+margin_left = 234.0
+margin_top = 42.0
+margin_right = 358.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 0 )
+size_flags_horizontal = 1
+clip_text = true
+align = 2
+method_name = "_on_select_field"
+method_binds = [ "min_m" ]
+
+[node name="min_s" parent="grid_container" index="5" instance=ExtResource( 2 )]
+margin_left = 362.0
+margin_top = 42.0
+margin_right = 592.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 64, 0 )
+clip_text = true
+align = 2
+method_name = "_on_select_field"
+method_binds = [ "min_s" ]
+
+[node name="label4" type="Label" parent="grid_container" index="6"]
+margin_top = 100.0
+margin_right = 230.0
+margin_bottom = 138.0
+text = " -"
+align = 1
+
+[node name="label5" type="Label" parent="grid_container" index="7"]
+margin_left = 234.0
+margin_top = 100.0
+margin_right = 358.0
+margin_bottom = 138.0
+text = " -"
+align = 1
+
+[node name="label6" type="Label" parent="grid_container" index="8"]
+margin_left = 362.0
+margin_top = 100.0
+margin_right = 592.0
+margin_bottom = 138.0
+text = " -"
+align = 1
+
+[node name="max_h" parent="grid_container" index="9" instance=ExtResource( 2 )]
+margin_top = 142.0
+margin_right = 230.0
+margin_bottom = 196.0
+clip_text = true
+align = 2
+method_name = "_on_select_field"
+method_binds = [ "max_h" ]
+
+[node name="max_m" parent="grid_container" index="10" instance=ExtResource( 2 )]
+margin_left = 234.0
+margin_top = 142.0
+margin_right = 358.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 64, 0 )
+size_flags_horizontal = 1
+clip_text = true
+align = 2
+method_name = "_on_select_field"
+method_binds = [ "max_m" ]
+
+[node name="max_s" parent="grid_container" index="11" instance=ExtResource( 2 )]
+margin_left = 362.0
+margin_top = 142.0
+margin_right = 592.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 64, 0 )
+clip_text = true
+align = 2
+method_name = "_on_select_field"
+method_binds = [ "max_s" ]
