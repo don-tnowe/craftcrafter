@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://styles/themes/stylebox_panel.tres" type="StyleBox" id=1]
 [ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=2]
+[ext_resource path="res://layout/elements/common/basic_action_button.tscn" type="PackedScene" id=3]
 
 [node name="info" type="MarginContainer"]
 anchor_right = 1.0
@@ -12,7 +13,7 @@ mouse_filter = 1
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 700.0
-margin_bottom = 856.0
+margin_bottom = 1019.0
 mouse_filter = 1
 custom_styles/panel = ExtResource( 1 )
 
@@ -20,7 +21,7 @@ custom_styles/panel = ExtResource( 1 )
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 700.0
-margin_bottom = 856.0
+margin_bottom = 1019.0
 custom_constants/separation = 0
 
 [node name="color_rect" type="ColorRect" parent="v_box_container"]
@@ -36,54 +37,78 @@ anchor_bottom = 1.0
 mouse_filter = 1
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 2 )
-text = "Additional Information"
+text = "edit_tm_title_meta"
 align = 1
 valign = 1
 
-[node name="margin_container" type="MarginContainer" parent="v_box_container"]
+[node name="id" type="MarginContainer" parent="v_box_container"]
 margin_top = 96.0
 margin_right = 680.0
-margin_bottom = 378.0
+margin_bottom = 240.0
 mouse_filter = 1
 
-[node name="v_box_container" type="VBoxContainer" parent="v_box_container/margin_container"]
+[node name="v_box_container" type="VBoxContainer" parent="v_box_container/id"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 660.0
+margin_bottom = 124.0
+
+[node name="label" type="Label" parent="v_box_container/id/v_box_container"]
+margin_right = 640.0
+margin_bottom = 38.0
+mouse_filter = 1
+text = "meta_id"
+
+[node name="line_edit" type="LineEdit" parent="v_box_container/id/v_box_container"]
+margin_top = 50.0
+margin_right = 640.0
+margin_bottom = 104.0
+mouse_filter = 1
+
+[node name="notes" type="MarginContainer" parent="v_box_container"]
+margin_top = 240.0
+margin_right = 680.0
+margin_bottom = 522.0
+mouse_filter = 1
+
+[node name="v_box_container" type="VBoxContainer" parent="v_box_container/notes"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 660.0
 margin_bottom = 262.0
 
-[node name="label" type="Label" parent="v_box_container/margin_container/v_box_container"]
+[node name="label" type="Label" parent="v_box_container/notes/v_box_container"]
 margin_right = 640.0
 margin_bottom = 38.0
 mouse_filter = 1
-text = "Description"
+text = "meta_notes"
 
-[node name="text_edit" type="TextEdit" parent="v_box_container/margin_container/v_box_container"]
+[node name="text_edit" type="TextEdit" parent="v_box_container/notes/v_box_container"]
 margin_top = 50.0
 margin_right = 640.0
 margin_bottom = 242.0
 rect_min_size = Vector2( 0, 192 )
 mouse_filter = 1
 
-[node name="margin_container2" type="MarginContainer" parent="v_box_container"]
-margin_top = 378.0
+[node name="description" type="MarginContainer" parent="v_box_container"]
+margin_top = 522.0
 margin_right = 680.0
-margin_bottom = 660.0
+margin_bottom = 804.0
 mouse_filter = 1
 
-[node name="v_box_container" type="VBoxContainer" parent="v_box_container/margin_container2"]
+[node name="v_box_container" type="VBoxContainer" parent="v_box_container/description"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 660.0
 margin_bottom = 262.0
 
-[node name="label" type="Label" parent="v_box_container/margin_container2/v_box_container"]
+[node name="label" type="Label" parent="v_box_container/description/v_box_container"]
 margin_right = 640.0
 margin_bottom = 38.0
 mouse_filter = 1
-text = "Developer Notes"
+text = "meta_description"
 
-[node name="text_edit" type="TextEdit" parent="v_box_container/margin_container2/v_box_container"]
+[node name="text_edit" type="TextEdit" parent="v_box_container/description/v_box_container"]
 margin_top = 50.0
 margin_right = 640.0
 margin_bottom = 242.0
@@ -91,26 +116,26 @@ rect_min_size = Vector2( 0, 192 )
 mouse_filter = 1
 
 [node name="delete" type="MarginContainer" parent="v_box_container"]
-margin_top = 660.0
+margin_top = 804.0
 margin_right = 680.0
-margin_bottom = 836.0
+margin_bottom = 999.0
 mouse_filter = 1
 
 [node name="v_box_container" type="VBoxContainer" parent="v_box_container/delete"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 660.0
-margin_bottom = 156.0
+margin_bottom = 175.0
 
 [node name="label" type="Label" parent="v_box_container/delete/v_box_container"]
 margin_right = 640.0
 margin_bottom = 38.0
 mouse_filter = 1
-text = "Danger Zone"
+text = "meta_dangerzone"
 
-[node name="button" type="Button" parent="v_box_container/delete/v_box_container"]
+[node name="button2" parent="v_box_container/delete/v_box_container" instance=ExtResource( 3 )]
 margin_top = 50.0
 margin_right = 640.0
-margin_bottom = 136.0
-mouse_filter = 1
-text = "DELETE"
+margin_bottom = 155.0
+text = "button_delete"
+method_name = "delete"
