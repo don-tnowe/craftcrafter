@@ -1,29 +1,43 @@
 extends EditValueBase
 
+var linked = false
+
 
 func setup_properties() -> void:
 	can_negative = false
 	can_inf = false
-
-	var min_value = screen_extra_data[0]["min"]
-	var max_value = screen_extra_data[0]["max"]
-	field_values = {
-		"min_s" : fmod(min_value, 60.0),
-		"min_m" : fmod(floor(min_value / 60.0), 60.0),
-		"min_h" : floor(min_value / 3600.0),
-		"max_s" : fmod(max_value, 60.0),
-		"max_m" : fmod(floor(max_value / 60.0), 60.0),
-		"max_h" : floor(max_value / 3600.0),
-	}
+	
 	.setup_properties()
+	
+	if field_values["max"] == field_values["min"]:
+		$"h_box_container/button".toggled_on = true
+		linked = true
+		
+	# Seconds get converted by verify_fields() inside _on_select_field()
 
-	screen_extra_data[1] = screen_extra_data[1] + "_s"
+
+func update_property(property : String, value : float) -> void:
+	if linked:
+		.update_property(
+			("min" if property.substr(0, 3) == "max" else "max")
+			+ property.substr(3), value)
+			
+	.update_property(property, value)
+
+
+func _on_link_toggled(value : bool) -> void:
+	linked = value
+	
+	var prefix = selected_property.substr(0, 3)
+	update_property(prefix, field_values[prefix])
+	update_property(prefix + "_m", field_values[prefix + "_m"])
+	update_property(prefix + "_h", field_values[prefix + "_h"])
 
 
 func _on_select_field(property : String) -> void:
 	verify_fields("min")
 	verify_fields("max")
-
+	
 	._on_select_field(property)
 
 
@@ -32,14 +46,14 @@ func _on_keypad_ok() -> void:
 	verify_fields("max")
 
 	field_values = {
-		"min" : get_seconds(field_values["min_s"], field_values["min_m"], field_values["min_h"]),
-		"max" : get_seconds(field_values["max_s"], field_values["max_m"], field_values["max_h"]),
+		"min" : get_seconds(field_values["min"], field_values["min_m"], field_values["min_h"]),
+		"max" : get_seconds(field_values["max"], field_values["max_m"], field_values["max_h"]),
 	}
 	._on_keypad_ok()
 
 
 func verify_fields(prefix : String) -> void:
-	var s = field_values[prefix + "_s"]
+	var s = field_values[prefix]
 	var m = field_values[prefix + "_m"]
 	var h = field_values[prefix + "_h"]
 	var delta = 0.0
@@ -69,7 +83,7 @@ func verify_fields(prefix : String) -> void:
 		m -= delta * 60.0
 
 	if delta != 0.0:
-		update_property(prefix + "_s", s)
+		update_property(prefix, s)
 		update_property(prefix + "_m", m)
 		update_property(prefix + "_h", h)
 
