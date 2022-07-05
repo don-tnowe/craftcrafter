@@ -51,7 +51,7 @@ func setup_properties() -> void:
 	for x in edit_elements:
 		var key = get_node(x).method_binds[0]
 		field_nodes[key] = get_node(x)
-		update_property(key, screen_extra_data[0].get(key, field_values[key]))
+		update_property(key, screen_extra_data[0].get(key, field_values.get(key, 0.0)))
 
 
 func _ready() -> void:
