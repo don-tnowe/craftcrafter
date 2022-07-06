@@ -1,6 +1,5 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scripts/elements/common/action_button.gd" type="Script" id=1]
 [ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/screens/edit_value_base.gd" type="Script" id=3]
 [ext_resource path="res://styles/themes/default_theme.tres" type="Theme" id=4]
@@ -12,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 4 )
 script = ExtResource( 3 )
+header_title = "screen_title_edit_value"
 
 [node name="keyboard" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -138,7 +138,7 @@ margin_right = 169.0
 margin_bottom = 105.0
 size_flags_horizontal = 3
 text = "7"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -151,7 +151,7 @@ margin_right = 326.0
 margin_bottom = 105.0
 size_flags_horizontal = 3
 text = "8"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -164,7 +164,7 @@ margin_right = 483.0
 margin_bottom = 105.0
 size_flags_horizontal = 3
 text = "9"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -177,7 +177,7 @@ margin_right = 640.0
 margin_bottom = 105.0
 size_flags_horizontal = 3
 text = "C"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -189,7 +189,7 @@ margin_right = 169.0
 margin_bottom = 198.0
 size_flags_horizontal = 3
 text = "4"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -203,7 +203,7 @@ margin_right = 326.0
 margin_bottom = 198.0
 size_flags_horizontal = 3
 text = "5"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -217,7 +217,7 @@ margin_right = 483.0
 margin_bottom = 198.0
 size_flags_horizontal = 3
 text = "6"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -231,7 +231,7 @@ margin_right = 640.0
 margin_bottom = 198.0
 size_flags_horizontal = 3
 text = "<X"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -243,7 +243,7 @@ margin_right = 169.0
 margin_bottom = 291.0
 size_flags_horizontal = 3
 text = "1"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -257,7 +257,7 @@ margin_right = 326.0
 margin_bottom = 291.0
 size_flags_horizontal = 3
 text = "2"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -271,7 +271,7 @@ margin_right = 483.0
 margin_bottom = 291.0
 size_flags_horizontal = 3
 text = "3"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -285,7 +285,7 @@ margin_right = 640.0
 margin_bottom = 291.0
 size_flags_horizontal = 3
 text = "+/-"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -297,7 +297,7 @@ margin_right = 169.0
 margin_bottom = 384.0
 size_flags_horizontal = 3
 text = "."
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -310,7 +310,7 @@ margin_right = 326.0
 margin_bottom = 384.0
 size_flags_horizontal = 3
 text = "0"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -324,7 +324,7 @@ margin_right = 483.0
 margin_bottom = 384.0
 size_flags_horizontal = 3
 text = "∞"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -337,7 +337,7 @@ margin_right = 640.0
 margin_bottom = 384.0
 size_flags_horizontal = 3
 text = "OK"
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -352,7 +352,7 @@ margin_right = 147.0
 margin_bottom = 121.0
 grow_horizontal = 2
 custom_fonts/font = ExtResource( 2 )
-text = "Edited Values"
+text = "screen_title_edit_value"
 align = 1
 __meta__ = {
 "_edit_lock_": true

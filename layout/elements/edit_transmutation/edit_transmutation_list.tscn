@@ -42,7 +42,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = ExtResource( 2 )
-text = "Consumed"
+text = "list"
 align = 1
 valign = 1
 
@@ -67,4 +67,4 @@ margin_left = 20.0
 margin_top = 20.0
 margin_right = 660.0
 margin_bottom = 125.0
-text = "ADD ITEM"
+text = "button_list_add"

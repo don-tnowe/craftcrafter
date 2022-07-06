@@ -190,7 +190,8 @@ margin_top = 156.0
 margin_right = 638.0
 margin_bottom = 242.0
 mouse_filter = 1
-text = "EDIT"
+text = "button_edit"
+clip_text = true
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
@@ -202,7 +203,8 @@ margin_top = 254.0
 margin_right = 638.0
 margin_bottom = 340.0
 mouse_filter = 1
-text = "GENERATE TREE"
+text = "button_generate_tm_chart"
+clip_text = true
 __meta__ = {
 "_edit_lock_": true
 }

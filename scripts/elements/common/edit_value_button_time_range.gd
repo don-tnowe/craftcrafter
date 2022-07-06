@@ -13,16 +13,16 @@ func load_collection(collection) -> void:
 
 func sec_to_formatted_string(sec : float) -> String:
 	if sec < 120.0: 
-		return str(sec) + "s"
+		return str(sec) + tr("time_seconds_s") 
 	
 	if sec < 3600.0: 
-		return str(floor(sec / 60.0)) + "m " + str(fmod(sec, 60.0)) + "s"
+		return str(floor(sec / 60.0)) + tr("time_minutes_s") + str(fmod(sec, 60.0)) + tr("time_seconds_s") 
 		
 	return (
 		str(floor(sec / 3600.0)) 
-		+ "h " 
+		+ tr("time_hours_s") 
 		+ str(fmod(floor(sec / 60.0), 60.0))
-		+ "m " 
+		+ tr("time_minutes_s")  
 		+ str(fmod(sec, 60.0))
-		+ "s "
+		+ tr("time_seconds_s") 
 	)

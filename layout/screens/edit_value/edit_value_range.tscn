@@ -27,7 +27,7 @@ __meta__ = {
 [node name="min_label" type="Label" parent="grid_container" index="0"]
 margin_right = 279.0
 margin_bottom = 38.0
-text = " Minimum"
+text = " value_min"
 align = 1
 __meta__ = {
 "_edit_lock_": true
@@ -45,7 +45,7 @@ __meta__ = {
 margin_left = 312.0
 margin_right = 591.0
 margin_bottom = 38.0
-text = " Maximum"
+text = " value_max"
 align = 1
 __meta__ = {
 "_edit_lock_": true
@@ -92,7 +92,7 @@ margin_top = 20.0
 margin_right = 452.0
 margin_bottom = 58.0
 size_flags_horizontal = 3
-text = "Link Min+Max"
+text = "value_link"
 align = 2
 __meta__ = {
 "_edit_lock_": true

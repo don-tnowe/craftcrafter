@@ -129,6 +129,9 @@ __meta__ = {
 [node name="screen2" type="ColorRect" parent="frame"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="screen" parent="frame" instance=ExtResource( 4 )]
 anchor_left = 1.0

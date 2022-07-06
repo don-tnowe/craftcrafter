@@ -115,7 +115,8 @@ margin_top = 132.0
 margin_right = 680.0
 margin_bottom = 237.0
 mouse_filter = 1
-text = "GENERATE TREE"
+text = "button_generate_tm_chart"
+clip_text = true
 
 [node name="scroll_container" type="ScrollContainer" parent="v_box_container"]
 show_behind_parent = true

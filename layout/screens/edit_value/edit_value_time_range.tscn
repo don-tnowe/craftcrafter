@@ -22,28 +22,28 @@ theme = ExtResource( 3 )
 columns = 3
 
 [node name="label" type="Label" parent="grid_container" index="0"]
-margin_right = 230.0
+margin_right = 192.0
 margin_bottom = 38.0
-text = " Hours"
+text = "time_hours"
 align = 1
 
 [node name="label2" type="Label" parent="grid_container" index="1"]
-margin_left = 234.0
-margin_right = 358.0
+margin_left = 196.0
+margin_right = 389.0
 margin_bottom = 38.0
-text = " Minutes"
+text = "time_minutes"
 align = 1
 
 [node name="label3" type="Label" parent="grid_container" index="2"]
-margin_left = 362.0
+margin_left = 393.0
 margin_right = 592.0
 margin_bottom = 38.0
-text = " Seconds"
+text = "time_seconds"
 align = 1
 
 [node name="min_h" parent="grid_container" index="3" instance=ExtResource( 2 )]
 margin_top = 42.0
-margin_right = 230.0
+margin_right = 192.0
 margin_bottom = 96.0
 clip_text = true
 align = 2
@@ -51,9 +51,9 @@ method_name = "_on_select_field"
 method_binds = [ "min_h" ]
 
 [node name="min_m" parent="grid_container" index="4" instance=ExtResource( 2 )]
-margin_left = 234.0
+margin_left = 196.0
 margin_top = 42.0
-margin_right = 358.0
+margin_right = 389.0
 margin_bottom = 96.0
 rect_min_size = Vector2( 64, 0 )
 size_flags_horizontal = 1
@@ -63,7 +63,7 @@ method_name = "_on_select_field"
 method_binds = [ "min_m" ]
 
 [node name="min_s" parent="grid_container" index="5" instance=ExtResource( 2 )]
-margin_left = 362.0
+margin_left = 393.0
 margin_top = 42.0
 margin_right = 592.0
 margin_bottom = 96.0
@@ -75,21 +75,21 @@ method_binds = [ "min" ]
 
 [node name="label4" type="Label" parent="grid_container" index="6"]
 margin_top = 100.0
-margin_right = 230.0
+margin_right = 192.0
 margin_bottom = 138.0
 text = " -"
 align = 1
 
 [node name="label5" type="Label" parent="grid_container" index="7"]
-margin_left = 234.0
+margin_left = 196.0
 margin_top = 100.0
-margin_right = 358.0
+margin_right = 389.0
 margin_bottom = 138.0
 text = " -"
 align = 1
 
 [node name="label6" type="Label" parent="grid_container" index="8"]
-margin_left = 362.0
+margin_left = 393.0
 margin_top = 100.0
 margin_right = 592.0
 margin_bottom = 138.0
@@ -98,7 +98,7 @@ align = 1
 
 [node name="max_h" parent="grid_container" index="9" instance=ExtResource( 2 )]
 margin_top = 142.0
-margin_right = 230.0
+margin_right = 192.0
 margin_bottom = 196.0
 clip_text = true
 align = 2
@@ -106,9 +106,9 @@ method_name = "_on_select_field"
 method_binds = [ "max_h" ]
 
 [node name="max_m" parent="grid_container" index="10" instance=ExtResource( 2 )]
-margin_left = 234.0
+margin_left = 196.0
 margin_top = 142.0
-margin_right = 358.0
+margin_right = 389.0
 margin_bottom = 196.0
 rect_min_size = Vector2( 64, 0 )
 size_flags_horizontal = 1
@@ -118,7 +118,7 @@ method_name = "_on_select_field"
 method_binds = [ "max_m" ]
 
 [node name="max_s" parent="grid_container" index="11" instance=ExtResource( 2 )]
-margin_left = 362.0
+margin_left = 393.0
 margin_top = 142.0
 margin_right = 592.0
 margin_bottom = 196.0
@@ -141,7 +141,7 @@ margin_top = 20.0
 margin_right = 452.0
 margin_bottom = 58.0
 size_flags_horizontal = 3
-text = "Link Min+Max"
+text = "value_link"
 align = 2
 __meta__ = {
 "_edit_lock_": true
