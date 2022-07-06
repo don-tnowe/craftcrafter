@@ -1,14 +1,17 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scripts/elements/common/screen_switch_button.gd" type="Script" id=1]
-[ext_resource path="res://styles/themes/edit_button.tres" type="Theme" id=2]
+[ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=2]
 
 [node name="button" type="Button"]
 margin_right = 136.0
 margin_bottom = 54.0
 mouse_filter = 1
 size_flags_horizontal = 3
-theme = ExtResource( 2 )
 text = "1"
 align = 0
 script = ExtResource( 1 )
+
+[node name="theme_custom_class_override" parent="." instance=ExtResource( 2 )]
+theme_class = "FloatButton"
+theme_stylebox_overrides = [ "normal", "hover", "pressed" ]

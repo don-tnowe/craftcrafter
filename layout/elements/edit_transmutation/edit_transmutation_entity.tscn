@@ -85,18 +85,20 @@ mouse_filter = 2
 
 [node name="button" parent="margin_container/h_box_container/control/h_box_container" instance=ExtResource( 3 )]
 margin_right = 241.0
+margin_bottom = 61.0
 data_node_name = "min"
 edit_screen = "res://layout/screens/edit_value/edit_value_range.tscn"
 
 [node name="label2" type="Label" parent="margin_container/h_box_container/control/h_box_container"]
 margin_left = 253.0
-margin_top = 8.0
+margin_top = 11.0
 margin_right = 278.0
-margin_bottom = 46.0
+margin_bottom = 49.0
 text = " - "
 
 [node name="button2" parent="margin_container/h_box_container/control/h_box_container" instance=ExtResource( 3 )]
 margin_left = 290.0
 margin_right = 532.0
+margin_bottom = 61.0
 data_node_name = "max"
 edit_screen = "res://layout/screens/edit_value/edit_value_range.tscn"

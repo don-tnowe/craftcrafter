@@ -19,7 +19,10 @@ func _ready() -> void:
 		cur_parent = cur_parent.get_parent()
 		if !is_instance_valid(cur_parent):
 			return
-
+	
+		if "theme_color" in cur_parent:
+			enabled_color = cur_parent.theme_color
+			
 		if cur_parent.has_method(method_name):
 			screen = cur_parent
 			break

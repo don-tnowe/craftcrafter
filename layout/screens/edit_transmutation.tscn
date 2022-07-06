@@ -1,14 +1,66 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://styles/themes/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://layout/elements/edit_transmutation/edit_transmutation_list.tscn" type="PackedScene" id=2]
-[ext_resource path="res://styles/themes/stylebox_panel.tres" type="StyleBox" id=3]
 [ext_resource path="res://layout/elements/meta_edit.tscn" type="PackedScene" id=4]
 [ext_resource path="res://layout/elements/common/edit_value_button.tscn" type="PackedScene" id=5]
 [ext_resource path="res://styles/icons/time.tres" type="Texture" id=6]
 [ext_resource path="res://layout/elements/common/data_view_node.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scripts/screens/screen_base.gd" type="Script" id=8]
 [ext_resource path="res://scripts/elements/common/edit_value_button_time_range.gd" type="Script" id=9]
+[ext_resource path="res://layout/elements/common/basic_action_button.tscn" type="PackedScene" id=12]
+[ext_resource path="res://styles/elements/Elements.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxTexture" id=32]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 214, 0, 64, 64 )
+margin_left = 16.0
+margin_right = 16.0
+margin_top = 16.0
+margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id=33]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.64775, 0.326828, 0.692733, 1 )
+
+[sub_resource type="StyleBoxTexture" id=34]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.207613, 0.0962092, 0.203922, 1 )
+
+[sub_resource type="StyleBoxTexture" id=35]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.705882, 0.360784, 0.764706, 1 )
 
 [node name="edit_transmutation" type="ColorRect"]
 anchor_right = 1.0
@@ -28,7 +80,6 @@ margin_right = 720.0
 margin_bottom = 277.0
 rect_min_size = Vector2( 0, 277 )
 mouse_filter = 1
-custom_styles/panel = ExtResource( 3 )
 
 [node name="margin_container" type="MarginContainer" parent="v_box_container/pinned"]
 margin_right = 720.0
@@ -88,6 +139,10 @@ __meta__ = {
 [node name="min" parent="v_box_container/pinned/margin_container/v_box_container/time" instance=ExtResource( 5 )]
 margin_left = 92.0
 margin_right = 361.0
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 script = ExtResource( 9 )
 data_node_name = "min"
 edit_screen = "res://layout/screens/edit_value/edit_value_time_range.tscn"
@@ -106,17 +161,22 @@ __meta__ = {
 [node name="max" parent="v_box_container/pinned/margin_container/v_box_container/time" instance=ExtResource( 5 )]
 margin_left = 410.0
 margin_right = 680.0
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 script = ExtResource( 9 )
 data_node_name = "max"
 edit_screen = "res://layout/screens/edit_value/edit_value_time_range.tscn"
 
-[node name="button" type="Button" parent="v_box_container/pinned/margin_container/v_box_container"]
+[node name="button_chart" parent="v_box_container/pinned/margin_container/v_box_container" instance=ExtResource( 12 )]
 margin_top = 132.0
 margin_right = 680.0
 margin_bottom = 237.0
-mouse_filter = 1
+custom_styles/hover = SubResource( 33 )
+custom_styles/pressed = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
 text = "button_generate_tm_chart"
-clip_text = true
 
 [node name="scroll_container" type="ScrollContainer" parent="v_box_container"]
 show_behind_parent = true
@@ -135,16 +195,25 @@ custom_constants/separation = 0
 
 [node name="consumed" parent="v_box_container/scroll_container/v_box_container" instance=ExtResource( 2 )]
 mouse_filter = 1
+theme = null
+theme_color = Color( 1, 0.141176, 0.219608, 1 )
+header_title = "tm_consumed"
 
 [node name="produced" parent="v_box_container/scroll_container/v_box_container" instance=ExtResource( 2 )]
 margin_top = 281.0
 margin_bottom = 562.0
 mouse_filter = 1
+theme = null
+theme_color = Color( 0.917647, 0.815686, 0.137255, 1 )
+header_title = "tm_produced"
 
 [node name="catalysts" parent="v_box_container/scroll_container/v_box_container" instance=ExtResource( 2 )]
 margin_top = 562.0
 margin_bottom = 843.0
 mouse_filter = 1
+theme = null
+theme_color = Color( 0.27451, 0.866667, 0.203922, 1 )
+header_title = "tm_required"
 
 [node name="meta" parent="v_box_container/scroll_container/v_box_container" instance=ExtResource( 4 )]
 anchor_right = 0.0

@@ -1,18 +1,635 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=57 format=2]
 
+[ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=1]
 [ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=2]
 [ext_resource path="res://scripts/screens/edit_value_base.gd" type="Script" id=3]
 [ext_resource path="res://styles/themes/default_theme.tres" type="Theme" id=4]
-[ext_resource path="res://styles/themes/edit_button.tres" type="Theme" id=5]
 [ext_resource path="res://scripts/elements/common/action_button.gd" type="Script" id=6]
+[ext_resource path="res://styles/fonts/body.tres" type="DynamicFont" id=7]
+[ext_resource path="res://styles/elements/Elements.png" type="Texture" id=8]
+[ext_resource path="res://layout/elements/common/basic_action_button.tscn" type="PackedScene" id=9]
+
+[sub_resource type="StyleBoxTexture" id=48]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=49]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=50]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=51]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=52]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=53]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=32]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 214, 0, 64, 64 )
+margin_left = 16.0
+margin_right = 16.0
+margin_top = 16.0
+margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id=54]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=55]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=56]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=57]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=58]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=59]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=60]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=61]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=62]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=63]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=64]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=65]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=66]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=67]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=68]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=1]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+
+[sub_resource type="StyleBoxEmpty" id=47]
+
+[sub_resource type="StyleBoxTexture" id=69]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=70]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=71]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=72]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=73]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=74]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=75]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=76]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=77]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=78]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=79]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=80]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=81]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=82]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=83]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=84]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=85]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=86]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=87]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=88]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=89]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
+
+[sub_resource type="StyleBoxTexture" id=90]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.917647, 0.127889, 0.198939, 1 )
+
+[sub_resource type="StyleBoxTexture" id=91]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+
+[sub_resource type="StyleBoxTexture" id=92]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 1, 0.141176, 0.219608, 1 )
 
 [node name="screen2" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 4 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 header_title = "screen_title_edit_value"
-theme_color = Color( 0.968627, 0.686275, 0.133333, 1 )
+theme_color = Color( 1, 0.141176, 0.219608, 1 )
 
 [node name="keyboard" type="MarginContainer" parent="."]
 anchor_left = 0.5
@@ -23,12 +640,15 @@ margin_left = -360.0
 margin_top = -576.0
 margin_right = 360.0
 margin_bottom = -88.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="panel" type="Panel" parent="keyboard"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 700.0
-margin_bottom = 561.0
+margin_bottom = 542.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -37,7 +657,7 @@ __meta__ = {
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 700.0
-margin_bottom = 561.0
+margin_bottom = 542.0
 __meta__ = {
 "_edit_lock_": true
 }
@@ -46,87 +666,96 @@ __meta__ = {
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 660.0
-margin_bottom = 521.0
+margin_bottom = 502.0
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="h_box_container" type="HBoxContainer" parent="keyboard/margin_container/v_box_container"]
 margin_right = 640.0
-margin_bottom = 105.0
+margin_bottom = 86.0
 custom_constants/separation = 0
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="button" type="Button" parent="keyboard/margin_container/v_box_container/h_box_container"]
-margin_right = 115.0
-margin_bottom = 105.0
-rect_min_size = Vector2( 104, 0 )
+[node name="button5" parent="keyboard/margin_container/v_box_container/h_box_container" instance=ExtResource( 9 )]
+margin_right = 136.0
+rect_min_size = Vector2( 136, 0 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
 text = "-10"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_adjust_value"
 method_binds = [ -10.0 ]
 
-[node name="button2" type="Button" parent="keyboard/margin_container/v_box_container/h_box_container"]
-margin_left = 115.0
-margin_right = 219.0
-margin_bottom = 105.0
-rect_min_size = Vector2( 104, 0 )
+[node name="button6" parent="keyboard/margin_container/v_box_container/h_box_container" instance=ExtResource( 9 )]
+margin_left = 136.0
+margin_right = 250.0
+rect_min_size = Vector2( 114, 0 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/hover = SubResource( 51 )
+custom_styles/pressed = SubResource( 52 )
+custom_styles/normal = SubResource( 53 )
 text = "-1"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_adjust_value"
 method_binds = [ -1.0 ]
 
 [node name="field" type="Button" parent="keyboard/margin_container/v_box_container/h_box_container"]
-margin_left = 219.0
-margin_right = 407.0
-margin_bottom = 105.0
+margin_left = 250.0
+margin_right = 390.0
+margin_bottom = 86.0
 size_flags_horizontal = 3
-theme = ExtResource( 5 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 text = "-1"
 clip_text = true
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="button3" type="Button" parent="keyboard/margin_container/v_box_container/h_box_container"]
-margin_left = 407.0
-margin_right = 511.0
-margin_bottom = 105.0
-rect_min_size = Vector2( 104, 0 )
+[node name="theme_overrider" parent="keyboard/margin_container/v_box_container/h_box_container/field" instance=ExtResource( 1 )]
+theme_class = "EditButton"
+theme_stylebox_overrides = [ "normal", "hover", "pressed", "disabled" ]
+theme_color_overrides = [ "font_color", "font_color_hover", "font_color_focus", "font_color_pressed", "font_color_disabled" ]
+
+[node name="button7" parent="keyboard/margin_container/v_box_container/h_box_container" instance=ExtResource( 9 )]
+margin_left = 390.0
+margin_right = 504.0
+rect_min_size = Vector2( 114, 0 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/hover = SubResource( 54 )
+custom_styles/pressed = SubResource( 55 )
+custom_styles/normal = SubResource( 56 )
 text = "+1"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_adjust_value"
 method_binds = [ 1.0 ]
 
-[node name="button4" type="Button" parent="keyboard/margin_container/v_box_container/h_box_container"]
-margin_left = 511.0
+[node name="button8" parent="keyboard/margin_container/v_box_container/h_box_container" instance=ExtResource( 9 )]
+margin_left = 504.0
 margin_right = 640.0
-margin_bottom = 105.0
-rect_min_size = Vector2( 104, 0 )
+rect_min_size = Vector2( 136, 0 )
+custom_fonts/font = ExtResource( 7 )
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 58 )
+custom_styles/normal = SubResource( 59 )
 text = "+10"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_adjust_value"
 method_binds = [ 10.0 ]
 
 [node name="grid_container" type="GridContainer" parent="keyboard/margin_container/v_box_container"]
-margin_top = 117.0
+margin_top = 98.0
 margin_right = 640.0
-margin_bottom = 501.0
+margin_bottom = 482.0
 custom_constants/vseparation = -12
 custom_constants/hseparation = -12
 columns = 4
@@ -134,41 +763,38 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="button" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button7" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_right = 169.0
 margin_bottom = 105.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 60 )
+custom_styles/pressed = SubResource( 61 )
+custom_styles/normal = SubResource( 62 )
 text = "7"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_number"
 method_binds = [ 7 ]
 
-[node name="button2" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button8" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_left = 157.0
 margin_right = 326.0
 margin_bottom = 105.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 63 )
+custom_styles/pressed = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
 text = "8"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_number"
 method_binds = [ 8 ]
 
-[node name="button3" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button9" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_left = 314.0
 margin_right = 483.0
 margin_bottom = 105.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
 text = "9"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_number"
 method_binds = [ 9 ]
 
@@ -177,6 +803,16 @@ margin_left = 471.0
 margin_right = 640.0
 margin_bottom = 105.0
 size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.658824, 0.658824, 0.658824, 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 47 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
 text = "C"
 script = ExtResource( 6 )
 __meta__ = {
@@ -184,44 +820,41 @@ __meta__ = {
 }
 method_name = "_on_keypad_clear"
 
-[node name="button5" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button4" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_top = 93.0
 margin_right = 169.0
 margin_bottom = 198.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 69 )
+custom_styles/pressed = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
 text = "4"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_number"
 method_binds = [ 4 ]
 
-[node name="button6" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button5" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_left = 157.0
 margin_top = 93.0
 margin_right = 326.0
 margin_bottom = 198.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 72 )
+custom_styles/pressed = SubResource( 73 )
+custom_styles/normal = SubResource( 74 )
 text = "5"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_number"
 method_binds = [ 5 ]
 
-[node name="button7" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button6" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_left = 314.0
 margin_top = 93.0
 margin_right = 483.0
 margin_bottom = 198.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 75 )
+custom_styles/pressed = SubResource( 76 )
+custom_styles/normal = SubResource( 77 )
 text = "6"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_number"
 method_binds = [ 6 ]
 
@@ -231,6 +864,16 @@ margin_top = 93.0
 margin_right = 640.0
 margin_bottom = 198.0
 size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.658824, 0.658824, 0.658824, 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 47 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
 text = "<X"
 script = ExtResource( 6 )
 __meta__ = {
@@ -238,44 +881,41 @@ __meta__ = {
 }
 method_name = "_on_keypad_erase"
 
-[node name="button9" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button1" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_top = 186.0
 margin_right = 169.0
 margin_bottom = 291.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 78 )
+custom_styles/pressed = SubResource( 79 )
+custom_styles/normal = SubResource( 80 )
 text = "1"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_number"
 method_binds = [ 1 ]
 
-[node name="button10" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button2" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_left = 157.0
 margin_top = 186.0
 margin_right = 326.0
 margin_bottom = 291.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 81 )
+custom_styles/pressed = SubResource( 82 )
+custom_styles/normal = SubResource( 83 )
 text = "2"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_number"
 method_binds = [ 2 ]
 
-[node name="button11" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button3" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_left = 314.0
 margin_top = 186.0
 margin_right = 483.0
 margin_bottom = 291.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 84 )
+custom_styles/pressed = SubResource( 85 )
+custom_styles/normal = SubResource( 86 )
 text = "3"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_number"
 method_binds = [ 3 ]
 
@@ -285,6 +925,16 @@ margin_top = 186.0
 margin_right = 640.0
 margin_bottom = 291.0
 size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.658824, 0.658824, 0.658824, 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 47 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
 text = "+/-"
 script = ExtResource( 6 )
 __meta__ = {
@@ -297,6 +947,16 @@ margin_top = 279.0
 margin_right = 169.0
 margin_bottom = 384.0
 size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.658824, 0.658824, 0.658824, 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 47 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
 text = "."
 script = ExtResource( 6 )
 __meta__ = {
@@ -304,17 +964,16 @@ __meta__ = {
 }
 method_name = "_on_keypad_point"
 
-[node name="button13" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button0" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_left = 157.0
 margin_top = 279.0
 margin_right = 326.0
 margin_bottom = 384.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 87 )
+custom_styles/pressed = SubResource( 88 )
+custom_styles/normal = SubResource( 89 )
 text = "0"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_number"
 method_binds = [ 0 ]
 
@@ -324,6 +983,16 @@ margin_top = 279.0
 margin_right = 483.0
 margin_bottom = 384.0
 size_flags_horizontal = 3
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0.658824, 0.658824, 0.658824, 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 47 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
 text = "∞"
 script = ExtResource( 6 )
 __meta__ = {
@@ -331,17 +1000,17 @@ __meta__ = {
 }
 method_name = "_on_keypad_inf"
 
-[node name="button_ok" type="Button" parent="keyboard/margin_container/v_box_container/grid_container"]
+[node name="button_ok" parent="keyboard/margin_container/v_box_container/grid_container" instance=ExtResource( 9 )]
 margin_left = 471.0
 margin_top = 279.0
 margin_right = 640.0
 margin_bottom = 384.0
 size_flags_horizontal = 3
+custom_styles/hover = SubResource( 90 )
+custom_styles/pressed = SubResource( 91 )
+custom_styles/focus = SubResource( 47 )
+custom_styles/normal = SubResource( 92 )
 text = "OK"
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
 method_name = "_on_keypad_ok"
 
 [node name="label" type="Label" parent="."]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/elements/common/theme_overrider.gd" type="Script" id=1]
+
+[node name="theme_overrider" type="Node"]
+script = ExtResource( 1 )
+theme_class = "Button"
+theme_stylebox_overrides = [ "normal" ]
+theme_color_overrides = [ "font_color" ]
+override_font = true
