@@ -30,7 +30,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=35]
 content_margin_left = 24.0
@@ -69,7 +69,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=38]
 content_margin_left = 24.0
@@ -120,7 +120,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=41]
 content_margin_left = 24.0
@@ -159,7 +159,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=44]
 content_margin_left = 24.0
@@ -198,7 +198,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=47]
 content_margin_left = 24.0
@@ -237,7 +237,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=50]
 content_margin_left = 24.0
@@ -276,7 +276,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=53]
 content_margin_left = 24.0
@@ -315,7 +315,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=56]
 content_margin_left = 24.0
@@ -354,7 +354,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=59]
 content_margin_left = 24.0
@@ -393,7 +393,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=62]
 content_margin_left = 24.0
@@ -432,7 +432,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=65]
 content_margin_left = 24.0
@@ -471,7 +471,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=68]
 content_margin_left = 24.0
@@ -510,7 +510,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=71]
 content_margin_left = 24.0
@@ -549,7 +549,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=74]
 content_margin_left = 24.0
@@ -588,7 +588,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=77]
 content_margin_left = 24.0
@@ -704,7 +704,7 @@ __meta__ = {
 [node name="min_label" type="Label" parent="grid_container" index="0"]
 margin_right = 279.0
 margin_bottom = 38.0
-text = " value_min"
+text = "value_min"
 align = 1
 __meta__ = {
 "_edit_lock_": true
@@ -722,7 +722,7 @@ __meta__ = {
 margin_left = 312.0
 margin_right = 591.0
 margin_bottom = 38.0
-text = " value_max"
+text = "value_max"
 align = 1
 __meta__ = {
 "_edit_lock_": true
@@ -732,6 +732,10 @@ __meta__ = {
 margin_top = 42.0
 margin_right = 279.0
 margin_bottom = 96.0
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 method_name = "_on_select_field"
 method_binds = [ "min" ]
 
@@ -750,6 +754,10 @@ margin_left = 312.0
 margin_top = 42.0
 margin_right = 591.0
 margin_bottom = 96.0
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 method_name = "_on_select_field"
 method_binds = [ "max" ]
 

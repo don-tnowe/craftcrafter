@@ -10,7 +10,8 @@ screen_title_edit_entity;;Edit Entity
 screen_title_tm_tree;;Transmutation Chart
 screen_title_edit_value;;Input Value
 ;;
-button_confirm;All caps!;CONFIRM
+button_start;All caps!;START
+button_confirm;;CONFIRM
 button_cancel;;CANCEL
 button_choose;;CHOOSE
 button_edit;;EDIT
