@@ -59,6 +59,13 @@ theme/custom_font="res://styles/fonts/body.tres"
 
 pointing/emulate_touch_from_mouse=true
 
+[locale]
+
+translations=PoolStringArray( "res://translations/translations.en.translation" )
+locale_filter=[ 1, [ "en" ] ]
+translation_remaps={
+}
+
 [node]
 
 name_casing=2

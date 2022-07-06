@@ -1,0 +1,53 @@
+;eo;en
+app_name;Just copy.;Craft Crafter
+;;
+screen_title_start;;Start
+screen_title_project_list;;Project List
+screen_title_tm_list;;Transmutations
+screen_title_edit_tm;;Edit Transmutation
+screen_title_entity_list;;Entities in Project
+screen_title_edit_entity;;Edit Entity
+screen_title_tm_tree;;Transmutation Chart
+screen_title_edit_value;;Input Value
+;;
+button_confirm;All caps!;CONFIRM
+button_cancel;;CANCEL
+button_choose;;CHOOSE
+button_edit;;EDIT
+button_delete;;DELETE
+button_list_add;;ADD ITEM
+button_generate_tm_chart;;GENERATE CHART
+;;
+tm_time_spent;;Time Spent
+tm_consumed;The entities that get consumed;Consumed
+tm_produced;The entities that get produced;Produced
+tm_required;The entities that are required;Required
+;;
+entity_amount_step;Step = 1 -> values can only be integers, Step = 2 -> only even;Step
+entity_amount_negatives;Whether negative values are allowed;Negatives
+entity_color1;;Foreground Color
+entity_color2;;Background Color
+entity_color3;;Background Color 2
+;;
+meta_title;;Additional Information
+meta_name;;Name
+meta_id;;ID
+meta_description;;Description
+meta_notes;;Notes
+meta_danger;;Danger Zone
+;;
+value_min;;Minimum
+value_max;;Maximum
+value_link;Edit both values simultaneously;Link Min+Max
+;;
+time_hours;;Hours
+time_minutes;;Minutes
+time_seconds;;Seconds
+time_hours_s;"For printing out the time: ""12h 5m 59s"". Mind the space at the end!";"h "
+time_minutes_s;;"m "
+time_seconds_s;No space at the end here.;s
+;;
+tm_chart_values_best;;Best Case
+tm_chart_values_worst;;Worst Case
+tm_chart_values_average;;Best-Worst Average
+;;
