@@ -3,7 +3,7 @@
 [ext_resource path="res://styles/themes/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://layout/elements/screen_header.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/screen_switcher.gd" type="Script" id=3]
-[ext_resource path="res://layout/screens/start_screen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/screens/screen_base.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "close_screen"
@@ -15,10 +15,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 0.498039, 0.498039, 0.498039, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("frame/screen2:visible")
@@ -55,6 +55,18 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 0.33, 0.33 ),
 "update": 0,
 "values": [ 1.0, 2.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("header/color_rect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.968627, 0.686275, 0.133333, 1 ), Color( 0.968627, 0.686275, 0.133333, 1 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -108,6 +120,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ 2.0, 1.0 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("header/color_rect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.968627, 0.686275, 0.133333, 1 ), Color( 0.968627, 0.686275, 0.133333, 1 ) ]
+}
 
 [node name="control" type="Control"]
 anchor_right = 1.0
@@ -117,6 +141,7 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
+init_screen = "res://layout/screens/start_screen.tscn"
 
 [node name="frame" type="Control" parent="."]
 anchor_right = 1.0
@@ -129,13 +154,11 @@ __meta__ = {
 [node name="screen2" type="ColorRect" parent="frame"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="screen" parent="frame" instance=ExtResource( 4 )]
-anchor_left = 1.0
-anchor_right = 2.0
+header_title = ""
 
 [node name="header" parent="." instance=ExtResource( 2 )]
 

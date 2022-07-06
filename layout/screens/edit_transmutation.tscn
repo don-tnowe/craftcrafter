@@ -15,7 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 8 )
 header_title = "screen_title_edit_tm"
-header_color = Color( 0.478431, 0.333333, 0.670588, 1 )
+theme_color = Color( 0.705882, 0.360784, 0.764706, 1 )
 
 [node name="v_box_container" type="VBoxContainer" parent="."]
 anchor_right = 1.0

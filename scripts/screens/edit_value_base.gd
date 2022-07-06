@@ -64,7 +64,7 @@ func _on_select_field(property : String) -> void:
 		selected_field.modulate = Color.white
 		
 	selected_field = field_nodes[property]
-	selected_field.modulate = header_color.blend(Color(1, 1, 1, 0.5))
+	selected_field.modulate = theme_color.blend(Color(1, 1, 1, 0.5))
 	selected_property = property
 	update_edited_field(field_values[property])
 

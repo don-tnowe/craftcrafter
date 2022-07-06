@@ -12,6 +12,7 @@ anchor_bottom = 1.0
 theme = ExtResource( 4 )
 script = ExtResource( 3 )
 header_title = "screen_title_edit_value"
+theme_color = Color( 0.968627, 0.686275, 0.133333, 1 )
 
 [node name="keyboard" type="MarginContainer" parent="."]
 anchor_left = 0.5

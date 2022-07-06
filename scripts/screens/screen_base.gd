@@ -4,7 +4,7 @@ extends ColorRect
 signal returned_to_scene()
 
 export(String) var header_title = "screen_title_"
-export(Color) var header_color = Color.darkgray
+export(Color) var theme_color = Color.darkgray
 
 var screen_extra_data  # Variant
 

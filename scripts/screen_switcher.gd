@@ -1,7 +1,9 @@
 extends Control
 
+export(String, FILE, "*.tscn") var init_screen
 
 onready var node_frame := $"frame"
+onready var node_header_title := $"header/color_rect/box/control/label"
 onready var node_anim := $"anim"
 
 var can_change_screen := true
@@ -12,6 +14,7 @@ func _ready() -> void:
 		return
 	
 	get_tree().set_quit_on_go_back(false)
+	switch_screen(init_screen)
 
 
 func switch_screen(scene_path : String, extra = null) -> void:
@@ -26,8 +29,9 @@ func switch_screen(scene_path : String, extra = null) -> void:
 	
 	node_frame.add_child(top_node)
 
-	start_animation("open_screen", str(get_path_to(bottom_node)), str(get_path_to(top_node)))
-		
+	node_header_title.text = top_node.header_title
+	start_animation("open_screen", bottom_node, top_node)
+
 
 func _on_back_pressed() -> void:
 	if !can_change_screen:
@@ -49,15 +53,27 @@ func _on_back_pressed() -> void:
 		else: 
 			bottom_node.reopen_screen()
 		
-	start_animation("close_screen", str(get_path_to(bottom_node)), str(get_path_to(top_node)))
+	node_header_title.text = bottom_node.header_title
+	start_animation("close_screen", bottom_node, top_node)
 		
 
-func start_animation(name : String, bottom_node_path_str : String, top_node_path_str : String):
+func start_animation(name : String, bottom_node : ColorRect, top_node : ColorRect):
 	var animation = node_anim.get_animation(name)
+	var bottom_node_path_str = str(get_path_to(bottom_node))
+	var top_node_path_str = str(get_path_to(top_node))
+	
 	animation.track_set_path(0, NodePath(bottom_node_path_str + ":modulate"))
 	animation.track_set_path(1, NodePath(bottom_node_path_str + ":visible"))
 	animation.track_set_path(2, NodePath(top_node_path_str + ":anchor_left"))
 	animation.track_set_path(3, NodePath(top_node_path_str + ":anchor_right"))
+	
+	if name == "close_screen":
+		animation.track_set_key_value(4, 0, top_node.theme_color)
+		animation.track_set_key_value(4, 1, bottom_node.theme_color)
+		
+	else:
+		animation.track_set_key_value(4, 0, bottom_node.theme_color)
+		animation.track_set_key_value(4, 1, top_node.theme_color)
 
 	node_anim.play(name)
 	can_change_screen = false
