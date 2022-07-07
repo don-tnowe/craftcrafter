@@ -3,6 +3,7 @@ extends Button
 
 export(String) var data_node_name
 export(String, FILE, "*.tscn") var edit_screen
+export(Resource) var edit_format
 
 var screen_switcher : Control
 var data_collection  # Variant: Array or Dictionary
@@ -12,14 +13,19 @@ func _ready() -> void:
 	var cur_parent = self
 	data_collection = null
 	
-	while is_instance_valid(cur_parent):
+	while true:
 		cur_parent = cur_parent.get_parent()
+		if !is_instance_valid(cur_parent):
+			break
 		
 		if data_collection == null && cur_parent.has_node(@"data_view_node"):
 			load_collection(cur_parent.get_node(@"data_view_node").data_collection)
 		
 		if cur_parent.has_signal("returned_to_scene"):
 			cur_parent.connect("returned_to_scene", self, "load_collection", [data_collection])
+		
+		if edit_format == null && "edit_format" in cur_parent:
+			edit_format = cur_parent.edit_format
 		
 		if cur_parent.has_method("switch_screen"):
 			screen_switcher = cur_parent
@@ -49,5 +55,5 @@ func _on_pressed() -> void:
 	if !is_instance_valid(screen_switcher):
 		return
 
-	screen_switcher.switch_screen(edit_screen, [data_collection, data_node_name])
+	screen_switcher.switch_screen(edit_screen, [data_collection, data_node_name, edit_format])
 

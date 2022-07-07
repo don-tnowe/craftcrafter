@@ -3,6 +3,7 @@ extends MarginContainer
 
 export(Color) var theme_color setget set_theme_color
 export(String) var header_title setget set_header_title
+export(Resource) var edit_format
 
 
 func update_style() -> void:

@@ -23,11 +23,17 @@ _global_script_classes=[ {
 "class": "ScreenBase",
 "language": "GDScript",
 "path": "res://scripts/screens/screen_base.gd"
+}, {
+"base": "Resource",
+"class": "ValueEditFormat",
+"language": "GDScript",
+"path": "res://scripts/value_edit_format.gd"
 } ]
 _global_script_class_icons={
 "EditValueBase": "",
 "EditValueButton": "",
-"ScreenBase": ""
+"ScreenBase": "",
+"ValueEditFormat": ""
 }
 
 [application]

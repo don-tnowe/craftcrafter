@@ -57,6 +57,12 @@ func setup_properties() -> void:
 		update_property(key, screen_extra_data[0].get(key, field_values.get(key, 0.0)))
 
 
+func _enter_tree() -> void:
+	# Must be in enter_tree() to activate before theme overriders
+	if screen_extra_data[2] is ValueEditFormat:
+		theme_color = screen_extra_data[2].screen_color
+
+
 func _ready() -> void:
 	setup_properties()
 
@@ -65,10 +71,24 @@ func _ready() -> void:
 		value_step = entity.get("step", 0.0)
 		$"label".text = entity["name"]
 
-	if value_step != 0.0 && fmod(value_step, 1.0) == 0.0:
-		node_keypad_point.modulate.a = 0.2
-		can_point = false
+	if screen_extra_data[2] is ValueEditFormat:
+		var format = screen_extra_data[2]
+		can_point = can_point && format.allow_fractions
+		can_inf = can_inf && format.allow_infinity
+		can_negative = can_negative && format.allow_negatives
 
+	if value_step != 0.0 && fmod(value_step, 1.0) == 0.0:
+		can_point = false
+	
+	if !can_point: 
+		node_keypad_point.modulate.a = 0.2
+
+	if !can_negative: 
+		node_keypad_negative.modulate.a = 0.2
+	
+	if !can_inf: 
+		node_keypad_inf.modulate.a = 0.2
+	
 	_on_select_field(screen_extra_data[1])
 
 
