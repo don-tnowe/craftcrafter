@@ -5,9 +5,11 @@ var project_data := {
 	"entities": {
 			"crystal1": {
 				"name": "Crystal of Testing",
+				"step": 1.0,
 			},
 			"crystal2": {
 				"name": "Crystal of Idk",
+				"step": 0.0,
 			},
 	},
 	"transmutations": {

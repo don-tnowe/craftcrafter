@@ -17,13 +17,16 @@ var field_values := {}
 var selected_field : Button
 var selected_property : String
 
-var value_step := 0
+var value_step := 0.0
 var can_negative := true
 var can_inf := true
 var can_point := true
 
 
 func update_property(property : String, value : float) -> void:
+	if value_step != 0.0:
+		value = round(value / value_step) * value_step  
+	
 	field_values[property] = value
 
 	if value == INF:
@@ -56,6 +59,16 @@ func setup_properties() -> void:
 
 func _ready() -> void:
 	setup_properties()
+
+	if screen_extra_data[0].has("id"):
+		var entity = DataController.project_data["entities"][screen_extra_data[0]["id"]]
+		value_step = entity.get("step", 0.0)
+		$"label".text = entity["name"]
+
+	if value_step != 0.0 && fmod(value_step, 1.0) == 0.0:
+		node_keypad_point.modulate.a = 0.2
+		can_point = false
+
 	_on_select_field(screen_extra_data[1])
 
 
@@ -118,7 +131,10 @@ func _on_keypad_negative() -> void:
 func _on_keypad_point() -> void:
 	if !can_point:
 		return
-			
+	
+	if node_edited_field.text == "":
+		node_edited_field.text = "0"
+
 	node_edited_field.text = node_edited_field.text.replace(".", "") + "."
 	# Do not update property!
 
@@ -133,9 +149,12 @@ func _on_keypad_inf() -> void:
 
 
 func _on_adjust_value(adjustment : float) -> void:
-	var new_value = field_values[selected_property] + adjustment
+	if value_step > abs(adjustment):
+		adjustment = value_step * sign(adjustment)
+
+	var new_value = float(node_edited_field.text) + adjustment
 	if !can_negative && new_value < 0:
-		new_value = 0
+		new_value = 0.0
 
 	update_property(selected_property, new_value)
-	update_edited_field(field_values[selected_property])
+	update_edited_field(new_value)
