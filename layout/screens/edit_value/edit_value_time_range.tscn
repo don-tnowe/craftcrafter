@@ -30,7 +30,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=35]
 content_margin_left = 24.0
@@ -69,7 +69,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=38]
 content_margin_left = 24.0
@@ -120,7 +120,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=41]
 content_margin_left = 24.0
@@ -159,7 +159,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=44]
 content_margin_left = 24.0
@@ -198,7 +198,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=47]
 content_margin_left = 24.0
@@ -237,7 +237,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=50]
 content_margin_left = 24.0
@@ -276,7 +276,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=53]
 content_margin_left = 24.0
@@ -315,7 +315,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=56]
 content_margin_left = 24.0
@@ -354,7 +354,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=59]
 content_margin_left = 24.0
@@ -393,7 +393,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=62]
 content_margin_left = 24.0
@@ -432,7 +432,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=65]
 content_margin_left = 24.0
@@ -471,7 +471,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=68]
 content_margin_left = 24.0
@@ -510,7 +510,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=71]
 content_margin_left = 24.0
@@ -549,7 +549,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=74]
 content_margin_left = 24.0
@@ -588,7 +588,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.294118, 0.0376469, 0.0585621, 1 )
+modulate_color = Color( 0.294118, 0.037647, 0.0585622, 1 )
 
 [sub_resource type="StyleBoxTexture" id=77]
 content_margin_left = 24.0
@@ -678,10 +678,16 @@ custom_styles/hover = SubResource( 69 )
 custom_styles/pressed = SubResource( 70 )
 custom_styles/normal = SubResource( 71 )
 
+[node name="button_negative" parent="keyboard/margin_container/v_box_container/grid_container" index="11"]
+self_modulate = Color( 1, 1, 1, 0.2 )
+
 [node name="button0" parent="keyboard/margin_container/v_box_container/grid_container" index="13"]
 custom_styles/hover = SubResource( 72 )
 custom_styles/pressed = SubResource( 73 )
 custom_styles/normal = SubResource( 74 )
+
+[node name="button_inf" parent="keyboard/margin_container/v_box_container/grid_container" index="14"]
+self_modulate = Color( 1, 1, 1, 0.2 )
 
 [node name="button_ok" parent="keyboard/margin_container/v_box_container/grid_container" index="15"]
 custom_styles/hover = SubResource( 75 )
@@ -722,6 +728,10 @@ align = 1
 margin_top = 42.0
 margin_right = 192.0
 margin_bottom = 96.0
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 clip_text = true
 align = 2
 method_name = "_on_select_field"
@@ -734,6 +744,10 @@ margin_right = 389.0
 margin_bottom = 96.0
 rect_min_size = Vector2( 64, 0 )
 size_flags_horizontal = 1
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 clip_text = true
 align = 2
 method_name = "_on_select_field"
@@ -745,6 +759,10 @@ margin_top = 42.0
 margin_right = 592.0
 margin_bottom = 96.0
 rect_min_size = Vector2( 64, 0 )
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 clip_text = true
 align = 2
 method_name = "_on_select_field"
@@ -777,6 +795,10 @@ align = 1
 margin_top = 142.0
 margin_right = 192.0
 margin_bottom = 196.0
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 clip_text = true
 align = 2
 method_name = "_on_select_field"
@@ -789,6 +811,10 @@ margin_right = 389.0
 margin_bottom = 196.0
 rect_min_size = Vector2( 64, 0 )
 size_flags_horizontal = 1
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 clip_text = true
 align = 2
 method_name = "_on_select_field"
@@ -800,6 +826,10 @@ margin_top = 142.0
 margin_right = 592.0
 margin_bottom = 196.0
 rect_min_size = Vector2( 64, 0 )
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 clip_text = true
 align = 2
 method_name = "_on_select_field"

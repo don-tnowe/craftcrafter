@@ -49,6 +49,12 @@ func _on_keypad_ok() -> void:
 		"min" : get_seconds(field_values["min"], field_values["min_m"], field_values["min_h"]),
 		"max" : get_seconds(field_values["max"], field_values["max_m"], field_values["max_h"]),
 	}
+	
+	if field_values["min"] > field_values["max"]:
+		var swap = field_values["max"]
+		.update_property("max", field_values["min"])
+		.update_property("min", swap)
+	
 	._on_keypad_ok()
 
 

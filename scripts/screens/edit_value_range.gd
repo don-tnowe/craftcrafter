@@ -25,7 +25,8 @@ func _on_link_toggled(value : bool) -> void:
 
 func _on_keypad_ok() -> void:
 	if field_values["min"] > field_values["max"]:
-		.update_property("max", field_values[selected_property])
-		.update_property("min", field_values[selected_property])
+		var swap = field_values["max"]
+		.update_property("max", field_values["min"])
+		.update_property("min", swap)
 
 	._on_keypad_ok()

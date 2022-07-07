@@ -1,4 +1,4 @@
-class_name EditValueBase
+ class_name EditValueBase
 extends ScreenBase
 
 export(Array, NodePath) var edit_elements
@@ -118,8 +118,8 @@ func _on_keypad_negative() -> void:
 func _on_keypad_point() -> void:
 	if !can_point:
 		return
-	
-	node_edited_field.text = node_edited_field.text + "."
+			
+	node_edited_field.text = node_edited_field.text.replace(".", "") + "."
 	# Do not update property!
 
 
