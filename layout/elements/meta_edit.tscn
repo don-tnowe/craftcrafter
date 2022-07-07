@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://scripts/elements/common/edit_value_line_edit.gd" type="Script" id=1]
 [ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=2]
 [ext_resource path="res://layout/elements/common/basic_action_button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=4]
@@ -52,14 +53,14 @@ mouse_filter = 1
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 700.0
-margin_bottom = 1019.0
+margin_bottom = 856.0
 mouse_filter = 1
 
 [node name="v_box_container" type="VBoxContainer" parent="."]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 700.0
-margin_bottom = 1019.0
+margin_bottom = 856.0
 custom_constants/separation = 0
 
 [node name="color_rect" type="ColorRect" parent="v_box_container"]
@@ -106,14 +107,14 @@ mouse_filter = 1
 [node name="description" type="MarginContainer" parent="v_box_container"]
 margin_top = 240.0
 margin_right = 680.0
-margin_bottom = 522.0
+margin_bottom = 384.0
 mouse_filter = 1
 
 [node name="v_box_container" type="VBoxContainer" parent="v_box_container/description"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 660.0
-margin_bottom = 262.0
+margin_bottom = 124.0
 
 [node name="label" type="Label" parent="v_box_container/description/v_box_container"]
 margin_right = 640.0
@@ -121,24 +122,26 @@ margin_bottom = 38.0
 mouse_filter = 1
 text = "meta_description"
 
-[node name="text_edit" type="TextEdit" parent="v_box_container/description/v_box_container"]
+[node name="line_edit" type="LineEdit" parent="v_box_container/description/v_box_container"]
 margin_top = 50.0
 margin_right = 640.0
-margin_bottom = 242.0
-rect_min_size = Vector2( 0, 192 )
+margin_bottom = 104.0
 mouse_filter = 1
+expand_to_text_length = true
+script = ExtResource( 1 )
+data_node_name = "description"
 
 [node name="notes" type="MarginContainer" parent="v_box_container"]
-margin_top = 522.0
+margin_top = 384.0
 margin_right = 680.0
-margin_bottom = 804.0
+margin_bottom = 528.0
 mouse_filter = 1
 
 [node name="v_box_container" type="VBoxContainer" parent="v_box_container/notes"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 660.0
-margin_bottom = 262.0
+margin_bottom = 124.0
 
 [node name="label" type="Label" parent="v_box_container/notes/v_box_container"]
 margin_right = 640.0
@@ -146,17 +149,19 @@ margin_bottom = 38.0
 mouse_filter = 1
 text = "meta_notes"
 
-[node name="text_edit" type="TextEdit" parent="v_box_container/notes/v_box_container"]
+[node name="line_edit" type="LineEdit" parent="v_box_container/notes/v_box_container"]
 margin_top = 50.0
 margin_right = 640.0
-margin_bottom = 242.0
-rect_min_size = Vector2( 0, 192 )
+margin_bottom = 104.0
 mouse_filter = 1
+expand_to_text_length = true
+script = ExtResource( 1 )
+data_node_name = "notes"
 
 [node name="delete" type="MarginContainer" parent="v_box_container"]
-margin_top = 804.0
+margin_top = 528.0
 margin_right = 680.0
-margin_bottom = 999.0
+margin_bottom = 723.0
 mouse_filter = 1
 
 [node name="v_box_container" type="VBoxContainer" parent="v_box_container/delete"]
