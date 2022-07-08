@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://layout/elements/common/entity_icon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://layout/elements/common/empty_action_button.tscn" type="PackedScene" id=2]
@@ -6,6 +6,45 @@
 [ext_resource path="res://layout/elements/common/empty_screen_switch_button.tscn" type="PackedScene" id=4]
 [ext_resource path="res://styles/icons/remove.tres" type="Texture" id=5]
 [ext_resource path="res://layout/elements/common/data_view_node.tscn" type="PackedScene" id=6]
+[ext_resource path="res://styles/elements/Elements.png" type="Texture" id=7]
+[ext_resource path="res://styles/fonts/body.tres" type="DynamicFont" id=8]
+[ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/elements/data_view/edit_value_line_edit.gd" type="Script" id=10]
+
+[sub_resource type="Image" id=36]
+data = {
+"data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"format": "LumAlpha8",
+"height": 16,
+"mipmaps": false,
+"width": 16
+}
+
+[sub_resource type="ImageTexture" id=34]
+flags = 4
+flags = 4
+image = SubResource( 36 )
+size = Vector2( 16, 16 )
+
+[sub_resource type="StyleBoxTexture" id=35]
+texture = SubResource( 34 )
+region_rect = Rect2( 0, 0, 16, 16 )
+margin_left = 2.0
+margin_right = 2.0
+margin_top = 2.0
+margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id=32]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 7 )
+region_rect = Rect2( 214, 0, 64, 64 )
+margin_left = 16.0
+margin_right = 16.0
+margin_top = 16.0
+margin_bottom = 16.0
 
 [node name="item" type="MarginContainer"]
 anchor_right = 1.0
@@ -55,13 +94,22 @@ margin_top = -16.0
 margin_right = 16.0
 margin_bottom = 16.0
 
-[node name="label" type="Label" parent="margin_container/h_box_container/control"]
+[node name="name" type="LineEdit" parent="margin_container/h_box_container/control"]
 anchor_right = 1.0
-margin_left = 4.0
-margin_right = -56.0
-margin_bottom = 40.0
+margin_left = 2.0
+margin_right = -37.0
+margin_bottom = 54.0
+mouse_filter = 2
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 8 )
+custom_styles/read_only = SubResource( 35 )
 text = "Nameless Item"
-clip_text = true
+editable = false
+script = ExtResource( 10 )
+
+[node name="theme_overrider" parent="margin_container/h_box_container/control/name" instance=ExtResource( 9 )]
+theme_class = "FlatLineEdit"
+theme_stylebox_overrides = [ "read_only" ]
 
 [node name="delete_button" parent="margin_container/h_box_container/control" instance=ExtResource( 2 )]
 self_modulate = Color( 0, 0, 0, 1 )
@@ -85,20 +133,26 @@ mouse_filter = 2
 
 [node name="button" parent="margin_container/h_box_container/control/h_box_container" instance=ExtResource( 3 )]
 margin_right = 241.0
-margin_bottom = 61.0
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 data_node_name = "min"
 edit_screen = "res://layout/screens/edit_value/edit_value_range.tscn"
 
 [node name="label2" type="Label" parent="margin_container/h_box_container/control/h_box_container"]
 margin_left = 253.0
-margin_top = 11.0
+margin_top = 8.0
 margin_right = 278.0
-margin_bottom = 49.0
+margin_bottom = 46.0
 text = " - "
 
 [node name="button2" parent="margin_container/h_box_container/control/h_box_container" instance=ExtResource( 3 )]
 margin_left = 290.0
 margin_right = 532.0
-margin_bottom = 61.0
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 data_node_name = "max"
 edit_screen = "res://layout/screens/edit_value/edit_value_range.tscn"

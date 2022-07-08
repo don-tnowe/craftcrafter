@@ -106,7 +106,6 @@ data_node_name_from_parent_name = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 scroll_horizontal_enabled = false
-scroll_deadzone = 32
 __meta__ = {
 "_edit_group_": true,
 "_edit_lock_": true

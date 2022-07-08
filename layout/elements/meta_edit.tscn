@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://scripts/elements/common/edit_value_line_edit.gd" type="Script" id=1]
+[ext_resource path="res://scripts/elements/data_view/edit_value_line_edit.gd" type="Script" id=1]
 [ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=2]
 [ext_resource path="res://layout/elements/common/basic_action_button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=4]

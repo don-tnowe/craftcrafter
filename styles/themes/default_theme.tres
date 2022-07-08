@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=16 format=2]
+[gd_resource type="Theme" load_steps=18 format=2]
 
 [ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=1]
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=2]
@@ -68,6 +68,10 @@ margin_left = 16.0
 margin_right = 16.0
 margin_top = 16.0
 margin_bottom = 16.0
+
+[sub_resource type="StyleBoxEmpty" id=34]
+
+[sub_resource type="StyleBoxEmpty" id=35]
 
 [sub_resource type="StyleBoxTexture" id=27]
 content_margin_left = 64.0
@@ -146,6 +150,9 @@ EditButton/styles/disabled = SubResource( 32 )
 EditButton/styles/hover = SubResource( 32 )
 EditButton/styles/normal = SubResource( 32 )
 EditButton/styles/pressed = SubResource( 32 )
+FlatLineEdit/fonts/font = ExtResource( 5 )
+FlatLineEdit/styles/normal = SubResource( 34 )
+FlatLineEdit/styles/readonly = SubResource( 35 )
 FloatButton/styles/disabled = SubResource( 27 )
 FloatButton/styles/hover = SubResource( 27 )
 FloatButton/styles/normal = SubResource( 27 )

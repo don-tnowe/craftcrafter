@@ -33,6 +33,7 @@ func _ready() -> void:
 	if end_padding > 0:
 		var padding_node = Control.new()
 		padding_node.rect_min_size.y = end_padding
+		padding_node.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		get_parent().call_deferred("add_child", padding_node)
 
 
