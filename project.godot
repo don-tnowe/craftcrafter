@@ -17,7 +17,7 @@ _global_script_classes=[ {
 "base": "Button",
 "class": "EditValueButton",
 "language": "GDScript",
-"path": "res://scripts/elements/common/edit_value_button.gd"
+"path": "res://scripts/elements/data_view/edit_value_button.gd"
 }, {
 "base": "ColorRect",
 "class": "ScreenBase",
@@ -52,12 +52,15 @@ window/size/width=720
 window/size/height=960
 window/size/test_width=320
 window/size/test_height=560
+window/energy_saving/keep_screen_on=false
 window/handheld/orientation="portrait"
+window/ios/hide_home_indicator=false
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
 [gui]
 
+common/default_scroll_deadzone=32
 theme/custom="res://styles/themes/default_theme.tres"
 theme/custom_font="res://styles/fonts/body.tres"
 
