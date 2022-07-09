@@ -1,9 +1,50 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://styles/themes/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://layout/elements/screen_header.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/screen_switcher.gd" type="Script" id=3]
 [ext_resource path="res://scripts/screens/screen_base.gd" type="Script" id=4]
+[ext_resource path="res://styles/elements/Elements.png" type="Texture" id=5]
+[ext_resource path="res://layout/elements/common/basic_action_button.tscn" type="PackedScene" id=6]
+
+[sub_resource type="StyleBoxTexture" id=5]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.888858, 0.621684, 0.120784, 1 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.284891, 0.183007, 0.0355556, 1 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.968627, 0.686275, 0.133333, 1 )
 
 [sub_resource type="Animation" id=1]
 resource_name = "close_screen"
@@ -67,6 +108,34 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 0.968627, 0.686275, 0.133333, 1 ), Color( 0.968627, 0.686275, 0.133333, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "close_textbox"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("textedit_panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("textedit_panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -133,6 +202,34 @@ tracks/4/keys = {
 "values": [ Color( 0.968627, 0.686275, 0.133333, 1 ), Color( 0.968627, 0.686275, 0.133333, 1 ) ]
 }
 
+[sub_resource type="Animation" id=3]
+resource_name = "open_textbox"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("textedit_panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("textedit_panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -141,6 +238,7 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
+theme_color = Color( 0.968627, 0.686275, 0.133333, 1 )
 init_screen = "res://layout/screens/start_screen.tscn"
 
 [node name="frame" type="Control" parent="."]
@@ -152,6 +250,8 @@ __meta__ = {
 }
 
 [node name="screen2" type="ColorRect" parent="frame"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 4 )
@@ -162,9 +262,46 @@ header_title = ""
 
 [node name="header" parent="." instance=ExtResource( 2 )]
 
+[node name="textedit_panel" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="margin_container" type="MarginContainer" parent="textedit_panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 64
+custom_constants/margin_top = 64
+custom_constants/margin_left = 64
+custom_constants/margin_bottom = 64
+
+[node name="text_edit" type="TextEdit" parent="textedit_panel/margin_container"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 656.0
+margin_bottom = 896.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="button" parent="textedit_panel/margin_container/text_edit" instance=ExtResource( 6 )]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 100.0
+margin_top = -155.0
+margin_right = -100.0
+margin_bottom = -50.0
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "button_confirm"
+method_name = "_on_textbox_accept_pressed"
+
 [node name="anim" type="AnimationPlayer" parent="."]
-autoplay = "open_screen"
 anims/close_screen = SubResource( 1 )
+anims/close_textbox = SubResource( 4 )
 anims/open_screen = SubResource( 2 )
+anims/open_textbox = SubResource( 3 )
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
