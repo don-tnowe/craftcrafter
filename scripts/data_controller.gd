@@ -5,10 +5,16 @@ var project_data := {
 	"entities": {
 			"crystal1": {
 				"name": "Crystal of Testing",
+				"visuals": {
+					"icon_path": "res://builtin_content/icons/minerals.svg",
+				},
 				"step": 1.0,
 			},
 			"crystal2": {
 				"name": "Crystal of Idk",
+				"visuals": {
+					"icon_path": "res://builtin_content/icons/minerals.svg",
+				},
 				"step": 0.0,
 			},
 	},
