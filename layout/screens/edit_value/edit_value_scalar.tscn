@@ -1,0 +1,701 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://layout/screens/edit_value/edit_value_base.tscn" type="PackedScene" id=1]
+[ext_resource path="res://layout/elements/common/edit_action_button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://styles/elements/Elements.png" type="Texture" id=3]
+[ext_resource path="res://scripts/screens/edit_value_scalar.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxTexture" id=33]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=34]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=35]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=36]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=37]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=38]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=32]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 214, 0, 64, 64 )
+margin_left = 16.0
+margin_right = 16.0
+margin_top = 16.0
+margin_bottom = 16.0
+
+[sub_resource type="StyleBoxTexture" id=39]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=40]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=41]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=42]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=43]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=44]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=45]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=46]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=47]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=48]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=49]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=50]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=51]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=52]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=53]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=54]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=55]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=56]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=57]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=58]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=59]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=60]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=61]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=62]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=63]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=64]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=65]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=66]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=67]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=68]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=69]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=70]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=71]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=72]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=73]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=74]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[sub_resource type="StyleBoxTexture" id=75]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.605647, 0.597882, 0.597882, 1 )
+
+[sub_resource type="StyleBoxTexture" id=76]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.194118, 0.176, 0.176, 1 )
+
+[sub_resource type="StyleBoxTexture" id=77]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.66, 0.66, 0.66, 1 )
+
+[node name="screen" instance=ExtResource( 1 )]
+script = ExtResource( 5 )
+theme_color = Color( 0.66, 0.66, 0.66, 1 )
+edit_elements = [ NodePath("max") ]
+
+[node name="button5" parent="keyboard/margin_container/v_box_container/h_box_container" index="0"]
+custom_styles/hover = SubResource( 33 )
+custom_styles/pressed = SubResource( 34 )
+custom_styles/normal = SubResource( 35 )
+
+[node name="button6" parent="keyboard/margin_container/v_box_container/h_box_container" index="1"]
+custom_styles/hover = SubResource( 36 )
+custom_styles/pressed = SubResource( 37 )
+custom_styles/normal = SubResource( 38 )
+
+[node name="field" parent="keyboard/margin_container/v_box_container/h_box_container" index="2"]
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
+
+[node name="button7" parent="keyboard/margin_container/v_box_container/h_box_container" index="3"]
+custom_styles/hover = SubResource( 39 )
+custom_styles/pressed = SubResource( 40 )
+custom_styles/normal = SubResource( 41 )
+
+[node name="button8" parent="keyboard/margin_container/v_box_container/h_box_container" index="4"]
+custom_styles/hover = SubResource( 42 )
+custom_styles/pressed = SubResource( 43 )
+custom_styles/normal = SubResource( 44 )
+
+[node name="button7" parent="keyboard/margin_container/v_box_container/grid_container" index="0"]
+custom_styles/hover = SubResource( 45 )
+custom_styles/pressed = SubResource( 46 )
+custom_styles/normal = SubResource( 47 )
+
+[node name="button8" parent="keyboard/margin_container/v_box_container/grid_container" index="1"]
+custom_styles/hover = SubResource( 48 )
+custom_styles/pressed = SubResource( 49 )
+custom_styles/normal = SubResource( 50 )
+
+[node name="button9" parent="keyboard/margin_container/v_box_container/grid_container" index="2"]
+custom_styles/hover = SubResource( 51 )
+custom_styles/pressed = SubResource( 52 )
+custom_styles/normal = SubResource( 53 )
+
+[node name="button4" parent="keyboard/margin_container/v_box_container/grid_container" index="4"]
+custom_styles/hover = SubResource( 54 )
+custom_styles/pressed = SubResource( 55 )
+custom_styles/normal = SubResource( 56 )
+
+[node name="button5" parent="keyboard/margin_container/v_box_container/grid_container" index="5"]
+custom_styles/hover = SubResource( 57 )
+custom_styles/pressed = SubResource( 58 )
+custom_styles/normal = SubResource( 59 )
+
+[node name="button6" parent="keyboard/margin_container/v_box_container/grid_container" index="6"]
+custom_styles/hover = SubResource( 60 )
+custom_styles/pressed = SubResource( 61 )
+custom_styles/normal = SubResource( 62 )
+
+[node name="button1" parent="keyboard/margin_container/v_box_container/grid_container" index="8"]
+custom_styles/hover = SubResource( 63 )
+custom_styles/pressed = SubResource( 64 )
+custom_styles/normal = SubResource( 65 )
+
+[node name="button2" parent="keyboard/margin_container/v_box_container/grid_container" index="9"]
+custom_styles/hover = SubResource( 66 )
+custom_styles/pressed = SubResource( 67 )
+custom_styles/normal = SubResource( 68 )
+
+[node name="button3" parent="keyboard/margin_container/v_box_container/grid_container" index="10"]
+custom_styles/hover = SubResource( 69 )
+custom_styles/pressed = SubResource( 70 )
+custom_styles/normal = SubResource( 71 )
+
+[node name="button0" parent="keyboard/margin_container/v_box_container/grid_container" index="13"]
+custom_styles/hover = SubResource( 72 )
+custom_styles/pressed = SubResource( 73 )
+custom_styles/normal = SubResource( 74 )
+
+[node name="button_ok" parent="keyboard/margin_container/v_box_container/grid_container" index="15"]
+custom_styles/hover = SubResource( 75 )
+custom_styles/pressed = SubResource( 76 )
+custom_styles/normal = SubResource( 77 )
+
+[node name="max" parent="." index="2" instance=ExtResource( 2 )]
+margin_left = 224.0
+margin_top = 152.0
+margin_right = 503.0
+margin_bottom = 206.0
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
+method_name = "_on_select_field"
+method_binds = [ "value" ]

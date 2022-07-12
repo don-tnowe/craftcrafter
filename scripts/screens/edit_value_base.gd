@@ -64,18 +64,17 @@ func _enter_tree() -> void:
 
 
 func _ready() -> void:
-	setup_properties()
-
-	if screen_extra_data[0].has("id"):
-		var entity = DataController.project_data["entities"][screen_extra_data[0]["id"]]
-		value_step = entity.get("step", 0.0)
-		$"label".text = entity["name"]
-
 	if screen_extra_data[2] is ValueEditFormat:
 		var format = screen_extra_data[2]
 		can_point = can_point && format.allow_fractions
 		can_inf = can_inf && format.allow_infinity
 		can_negative = can_negative && format.allow_negatives
+		
+		if format.use_entity_step && screen_extra_data[0].has("id"):
+			var entity = DataController.project_data["entities"][screen_extra_data[0]["id"]]
+			value_step = entity.get("step", 0.0)
+			$"label".text = entity["name"]
+
 
 	if value_step != 0.0 && fmod(value_step, 1.0) == 0.0:
 		can_point = false
@@ -89,6 +88,7 @@ func _ready() -> void:
 	if !can_inf: 
 		node_keypad_inf.modulate.a = 0.2
 	
+	setup_properties()
 	_on_select_field(screen_extra_data[1])
 
 
