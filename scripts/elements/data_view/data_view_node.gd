@@ -4,11 +4,12 @@ export(String) var data_node_name
 export(bool) var data_node_name_from_parent_name
 export(bool) var start_from_root
 
-var data_collection # Variant: Array or Dictionary
+var data_collection  # Variant: Array or Dictionary
 
 
 func _ready() -> void:
 	var cur_parent = self
+	data_collection = {}
 	
 	if data_node_name_from_parent_name:
 		data_node_name = get_parent().name

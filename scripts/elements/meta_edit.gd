@@ -24,7 +24,7 @@ func _ready() -> void:
 func save_changes() -> void:
 	var new_id = node_id_line_edit.text
 	var new_item = $"data_view_node".data_collection
-	if !new_item.has("id"):
+	if !new_item.has("id") || old_id == "":
 		if new_id == "":
 			new_id = new_item.name
 

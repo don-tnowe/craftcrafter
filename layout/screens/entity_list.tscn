@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=1]
-[ext_resource path="res://layout/screens/entity_list.gd" type="Script" id=2]
+[ext_resource path="res://scripts/screens/entity_list.gd" type="Script" id=2]
 [ext_resource path="res://styles/elements/shadow_gradient.tres" type="Texture" id=3]
 [ext_resource path="res://styles/icons/search.tres" type="Texture" id=4]
-[ext_resource path="res://styles/icons/add.tres" type="Texture" id=5]
+[ext_resource path="res://layout/elements/create_float_button.tscn" type="PackedScene" id=5]
 [ext_resource path="res://layout/elements/common/data_view_node.tscn" type="PackedScene" id=6]
 [ext_resource path="res://layout/elements/common/collection_view_filler.tscn" type="PackedScene" id=7]
 [ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=8]
@@ -130,26 +130,12 @@ rect_rotation = -89.9999
 texture = ExtResource( 3 )
 expand = true
 
-[node name="button_add" type="Button" parent="."]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -256.0
-margin_top = -256.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+[node name="button_create" parent="." instance=ExtResource( 5 )]
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
-icon = ExtResource( 5 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="theme_custom_class_override" parent="button_add" instance=ExtResource( 8 )]
-theme_class = "FloatButton"
-theme_stylebox_overrides = [ "normal", "hover", "pressed" ]
-override_stylebox_color = true
+data_node_name = "entities"
+edit_screen = "res://layout/screens/edit_entity.tscn"
 
 [node name="button_search" type="Button" parent="."]
 anchor_top = 1.0

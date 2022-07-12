@@ -121,8 +121,34 @@ func get_data_from_path(path : String):
 	return cur_value
 
 
+func create_empty_item(for_collection : String) -> Dictionary:
+	if for_collection == "entities":
+		return {
+			"name": "Enter Name Here!",
+			"visuals": {
+				"icon_path": "res://builtin_content/icons/checker.png",
+			},
+			"step": 0.0,
+			"allow_negatives": false,
+		}
+		
+	if for_collection == "transmutations":
+		return {
+			"name": "",
+			"time": { "min": 1, "max": 1, },
+			"consumed": [],
+			"produced": [],
+			"catalysts": [],
+		}
+
+	return {}
+
+
 func add_item(in_collection : String, new_id : String, item : Dictionary) -> void:
 	new_id = clean_id(new_id, project_data[in_collection])
+	if new_id == "":
+		return
+
 	item["id"] = new_id
 	project_data[in_collection][new_id] = item
 
@@ -161,7 +187,7 @@ func clean_id(id : String, search_duplicates_in : Dictionary) -> String:
 	if search_duplicates_in.has(id):
 		var id_stripped = id.rstrip("1234567890")
 		var suffix_num = 2
-		if id_stripped != "":
+		if id_stripped != id:
 			suffix_num = id.substr(id_stripped.length()).to_int()
 
 		while search_duplicates_in.has(id_stripped + str(suffix_num)):

@@ -20,6 +20,9 @@ func _ready() -> void:
 
 func load_collection(collection) -> void:
 	data_collection = collection
+	if !collection.has("id") || collection["id"] == "":
+		return
+
 	var entity_vis = DataController.project_data["entities"][collection["id"]]["visuals"]
 	texture = load(entity_vis["icon_path"])
 	self_modulate = entity_vis.get("fg", Color.white)

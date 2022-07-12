@@ -27,18 +27,14 @@ func _ready() -> void:
 		if edit_format == null && "edit_format" in cur_parent:
 			edit_format = cur_parent.edit_format
 		
-		if data_collection == null && "screen_extra_data" in cur_parent:
+		if data_collection == null && "screen_extra_data" in cur_parent && cur_parent.screen_extra_data != null:
 			data_collection = cur_parent.screen_extra_data[0]
 		
 		if cur_parent.has_method("switch_screen"):
 			screen_switcher = cur_parent
 			break
 		
-	if data_collection == null:
-		data_collection = screen_switcher.screen_extra_data[0]
-
-	if connect("pressed", self, "_on_pressed") != OK:
-		return
+	connect("pressed", self, "_on_pressed")
 
 
 func load_collection(collection) -> void:
