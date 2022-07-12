@@ -70,6 +70,7 @@ screen_color = Color( 1, 0.141176, 0.219608, 1 )
 allow_negatives = false
 allow_infinity = false
 allow_fractions = true
+use_entity_step = true
 
 [sub_resource type="Resource" id=40]
 script = ExtResource( 3 )
@@ -77,6 +78,7 @@ screen_color = Color( 0.917647, 0.815686, 0.137255, 1 )
 allow_negatives = true
 allow_infinity = false
 allow_fractions = true
+use_entity_step = true
 
 [sub_resource type="Resource" id=41]
 script = ExtResource( 3 )
@@ -84,6 +86,7 @@ screen_color = Color( 0.27451, 0.866667, 0.203922, 1 )
 allow_negatives = true
 allow_infinity = true
 allow_fractions = true
+use_entity_step = true
 
 [node name="edit_transmutation" type="ColorRect"]
 anchor_right = 1.0
@@ -213,7 +216,7 @@ scroll_horizontal_enabled = false
 
 [node name="v_box_container" type="VBoxContainer" parent="v_box_container/scroll_container"]
 margin_right = 720.0
-margin_bottom = 1606.0
+margin_bottom = 1822.0
 size_flags_horizontal = 3
 custom_constants/separation = 0
 
@@ -246,4 +249,4 @@ edit_format = SubResource( 41 )
 anchor_right = 0.0
 margin_top = 843.0
 margin_right = 720.0
-margin_bottom = 1606.0
+margin_bottom = 1822.0

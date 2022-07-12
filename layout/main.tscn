@@ -31,7 +31,7 @@ margin_left = 52.0
 margin_right = 52.0
 margin_top = 32.0
 margin_bottom = 36.0
-modulate_color = Color( 0.284891, 0.183007, 0.0355556, 1 )
+modulate_color = Color( 0.284891, 0.183007, 0.0355555, 1 )
 
 [sub_resource type="StyleBoxTexture" id=7]
 content_margin_left = 24.0
@@ -266,6 +266,9 @@ header_title = ""
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="margin_container" type="MarginContainer" parent="textedit_panel"]
 anchor_right = 1.0
@@ -274,6 +277,9 @@ custom_constants/margin_right = 64
 custom_constants/margin_top = 64
 custom_constants/margin_left = 64
 custom_constants/margin_bottom = 64
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="text_edit" type="TextEdit" parent="textedit_panel/margin_container"]
 margin_left = 64.0
@@ -281,7 +287,8 @@ margin_top = 64.0
 margin_right = 656.0
 margin_bottom = 896.0
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="button" parent="textedit_panel/margin_container/text_edit" instance=ExtResource( 6 )]
