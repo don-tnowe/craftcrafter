@@ -69,7 +69,7 @@ func _on_back_pressed() -> void:
 	start_animation("close_screen", bottom_node, top_node)
 		
 
-func start_animation(name : String, bottom_node : ColorRect, top_node : ColorRect):
+func start_animation(name : String, bottom_node : ColorRect, top_node : ColorRect) -> void:
 	var animation = node_anim.get_animation(name)
 	var bottom_node_path_str = str(get_path_to(bottom_node))
 	var top_node_path_str = str(get_path_to(top_node))
@@ -97,7 +97,7 @@ func _on_anim_animation_finished(anim_name) -> void:
 		node_frame.get_child(node_frame.get_child_count() - 1).free()
 
 
-func show_keyboard(text : String):
+func show_keyboard(text : String) -> void:
 	node_anim.play("open_textbox")
 	
 	node_textedit.text = text
@@ -115,7 +115,7 @@ func show_keyboard(text : String):
 	$"textedit_panel/margin_container".margin_bottom = -OS.get_virtual_keyboard_height()
 
 
-func _on_textbox_accept_pressed():
+func _on_textbox_accept_pressed() -> void:
 	node_anim.play("close_textbox")
 	textbox_open = false
 	emit_signal("keyboard_confirmed", node_textedit.text)

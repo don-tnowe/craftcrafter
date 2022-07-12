@@ -4,7 +4,7 @@ extends TextureRect
 var data_collection
 
 
-func _ready():
+func _ready() -> void:
 	var cur_parent = self
 	data_collection = null
 	
@@ -18,7 +18,7 @@ func _ready():
 		cur_parent = cur_parent.get_parent()
 
 
-func load_collection(collection):
+func load_collection(collection) -> void:
 	data_collection = collection
 	var entity_vis = DataController.project_data["entities"][collection["id"]]["visuals"]
 	texture = load(entity_vis["icon_path"])
