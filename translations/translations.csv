@@ -24,8 +24,8 @@ tm_consumed;The entities that get consumed;Consumed
 tm_produced;The entities that get produced;Produced
 tm_required;The entities that are required;Required
 ;;
-entity_amount_step;Step = 1 -> values can only be integers, Step = 2 -> only even;Step
-entity_amount_negatives;Whether negative values are allowed;Negatives
+entity_amount_step;Step = 1 -> values can only be integers, Step = 2 -> only even;Amount Step
+entity_amount_negatives;Whether negative values are allowed;Allow Negative Amount
 entity_color1;;Foreground Color
 entity_color2;;Background Color
 entity_color3;;Background Color 2

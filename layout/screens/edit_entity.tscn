@@ -1,16 +1,17 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=1]
 [ext_resource path="res://scripts/screens/screen_base.gd" type="Script" id=2]
 [ext_resource path="res://styles/icons/edit.tres" type="Texture" id=3]
 [ext_resource path="res://scripts/elements/data_view/edit_value_line_edit.gd" type="Script" id=4]
-[ext_resource path="res://layout/elements/common/toggle_button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://layout/elements/common/edit_value_toggle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://layout/elements/common/entity_icon.tscn" type="PackedScene" id=6]
-[ext_resource path="res://layout/elements/common/basic_edit_value_button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://layout/elements/common/basic_action_button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://layout/elements/common/edit_value_button.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scripts/value_edit_format.gd" type="Script" id=9]
 [ext_resource path="res://layout/elements/common/data_view_node.tscn" type="PackedScene" id=10]
 [ext_resource path="res://layout/elements/meta_edit.tscn" type="PackedScene" id=11]
+[ext_resource path="res://layout/elements/common/basic_edit_value_button.tscn" type="PackedScene" id=12]
 
 [sub_resource type="StyleBoxTexture" id=37]
 content_margin_left = 24.0
@@ -39,6 +40,45 @@ margin_bottom = 36.0
 modulate_color = Color( 0.284891, 0.183007, 0.0355555, 1 )
 
 [sub_resource type="StyleBoxTexture" id=39]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.968627, 0.686275, 0.133333, 1 )
+
+[sub_resource type="StyleBoxTexture" id=40]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.888858, 0.621684, 0.120784, 1 )
+
+[sub_resource type="StyleBoxTexture" id=41]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.284891, 0.183007, 0.0355555, 1 )
+
+[sub_resource type="StyleBoxTexture" id=42]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -128,7 +168,7 @@ margin_right = 156.0
 margin_bottom = 156.0
 rect_min_size = Vector2( 156, 156 )
 
-[node name="button_edit" parent="scroll_container/v_box_container/margin_container/margin_container/v_box_container/h_box_container/icon" instance=ExtResource( 7 )]
+[node name="button_edit" parent="scroll_container/v_box_container/margin_container/margin_container/v_box_container/h_box_container/icon" instance=ExtResource( 12 )]
 margin_left = 76.0
 margin_top = 76.0
 margin_right = 208.0
@@ -156,6 +196,16 @@ margin_bottom = 54.0
 text = "Nameless Item"
 script = ExtResource( 4 )
 data_node_name = "name"
+
+[node name="button_chart" parent="scroll_container/v_box_container/margin_container/margin_container/v_box_container/h_box_container/control" instance=ExtResource( 7 )]
+margin_left = 32.0
+margin_top = 64.0
+margin_right = 488.0
+margin_bottom = 169.0
+custom_styles/hover = SubResource( 40 )
+custom_styles/pressed = SubResource( 41 )
+custom_styles/normal = SubResource( 42 )
+text = "button_generate_tm_chart"
 
 [node name="control" type="Control" parent="scroll_container/v_box_container/margin_container/margin_container/v_box_container"]
 margin_top = 168.0
@@ -200,10 +250,10 @@ margin_bottom = 58.0
 size_flags_horizontal = 3
 text = "entity_amount_negatives"
 
-[node name="button" parent="scroll_container/v_box_container/margin_container/margin_container/v_box_container/h_box_container3" instance=ExtResource( 5 )]
+[node name="negatives_toggle" parent="scroll_container/v_box_container/margin_container/margin_container/v_box_container/h_box_container3" instance=ExtResource( 5 )]
 margin_left = 512.0
 margin_right = 640.0
-method_name = "set_allow_negatives"
+data_node_name = "negatives"
 
 [node name="info" parent="scroll_container/v_box_container" instance=ExtResource( 11 )]
 anchor_right = 0.0

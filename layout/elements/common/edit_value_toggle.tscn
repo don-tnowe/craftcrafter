@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://layout/elements/common/toggle_button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/elements/data_view/edit_value_toggle.gd" type="Script" id=2]
+
+[node name="button" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+enabled_color = Color( 0, 0, 0, 1 )
