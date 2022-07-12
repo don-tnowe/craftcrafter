@@ -30,6 +30,8 @@ entity_color1;;Foreground Color
 entity_color2;;Background Color
 entity_color3;;Background Color 2
 ;;
+edit_property_step;;Step
+;;
 meta_title;;Additional Information
 meta_name;;Name
 meta_id;;ID
