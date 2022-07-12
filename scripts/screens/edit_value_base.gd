@@ -1,4 +1,4 @@
- class_name EditValueBase
+class_name EditValueBase
 extends ScreenBase
 
 export(Array, NodePath) var edit_elements
@@ -115,7 +115,7 @@ func _on_keypad_ok() -> void:
 	for k in field_values:
 		output_dict[k] = field_values[k]
 
-	get_parent().get_parent()._on_back_pressed()
+	go_back()
 	
 
 func _on_keypad_clear() -> void:

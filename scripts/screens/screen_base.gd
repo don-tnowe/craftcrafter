@@ -27,3 +27,7 @@ func reopen_screen(closed_screen_result) -> void:
 
 func get_result() -> void:
 	pass
+
+
+func go_back() -> void:
+	get_parent().get_parent()._on_back_pressed()
