@@ -59,7 +59,8 @@ func load_collection(collection) -> void:
 			if !display_nodes.has(k):
 				create_item(k)
 				
-	get_parent().call_deferred("move_child", padding_node, get_parent().get_child_count())
+	if padding_node != null:
+		get_parent().call_deferred("move_child", padding_node, get_parent().get_child_count())
 
 
 func create_item(key : String) -> void:
