@@ -1,105 +1,105 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://layout/elements/transmutation_list/transmutation_list_item.tscn" type="PackedScene" id=1]
-[ext_resource path="res://styles/elements/Elements.png" type="Texture" id=2]
-[ext_resource path="res://styles/icons/add.tres" type="Texture" id=3]
+[ext_resource path="res://styles/elements/Elements.png" type="Texture" id=1]
+[ext_resource path="res://layout/screens/entity_list.gd" type="Script" id=2]
+[ext_resource path="res://styles/elements/shadow_gradient.tres" type="Texture" id=3]
 [ext_resource path="res://styles/icons/search.tres" type="Texture" id=4]
-[ext_resource path="res://styles/elements/shadow_gradient.tres" type="Texture" id=5]
-[ext_resource path="res://scripts/screens/screen_base.gd" type="Script" id=7]
-[ext_resource path="res://layout/elements/common/collection_view_filler.tscn" type="PackedScene" id=8]
-[ext_resource path="res://layout/elements/common/data_view_node.tscn" type="PackedScene" id=9]
-[ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=11]
+[ext_resource path="res://styles/icons/add.tres" type="Texture" id=5]
+[ext_resource path="res://layout/elements/common/data_view_node.tscn" type="PackedScene" id=6]
+[ext_resource path="res://layout/elements/common/collection_view_filler.tscn" type="PackedScene" id=7]
+[ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=8]
+[ext_resource path="res://layout/elements/entity_list/entity_list_item.tscn" type="PackedScene" id=9]
 
 [sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 64.0
 content_margin_right = 64.0
 content_margin_top = 64.0
 content_margin_bottom = 64.0
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_rect = Rect2( 0, 84, 256, 256 )
 margin_left = 128.0
 margin_right = 128.0
 margin_top = 128.0
 margin_bottom = 128.0
-modulate_color = Color( 0.705882, 0.360784, 0.764706, 1 )
+modulate_color = Color( 0.968627, 0.686275, 0.133333, 1 )
 
 [sub_resource type="StyleBoxTexture" id=2]
 content_margin_left = 64.0
 content_margin_right = 64.0
 content_margin_top = 64.0
 content_margin_bottom = 64.0
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_rect = Rect2( 0, 84, 256, 256 )
 margin_left = 128.0
 margin_right = 128.0
 margin_top = 128.0
 margin_bottom = 128.0
-modulate_color = Color( 0.705882, 0.360784, 0.764706, 1 )
+modulate_color = Color( 0.968627, 0.686275, 0.133333, 1 )
 
 [sub_resource type="StyleBoxTexture" id=3]
 content_margin_left = 64.0
 content_margin_right = 64.0
 content_margin_top = 64.0
 content_margin_bottom = 64.0
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_rect = Rect2( 0, 84, 256, 256 )
 margin_left = 128.0
 margin_right = 128.0
 margin_top = 128.0
 margin_bottom = 128.0
-modulate_color = Color( 0.705882, 0.360784, 0.764706, 1 )
+modulate_color = Color( 0.968627, 0.686275, 0.133333, 1 )
 
 [sub_resource type="StyleBoxTexture" id=4]
 content_margin_left = 64.0
 content_margin_right = 64.0
 content_margin_top = 64.0
 content_margin_bottom = 64.0
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_rect = Rect2( 0, 84, 256, 256 )
 margin_left = 128.0
 margin_right = 128.0
 margin_top = 128.0
 margin_bottom = 128.0
-modulate_color = Color( 0.705882, 0.360784, 0.764706, 1 )
+modulate_color = Color( 0.968627, 0.686275, 0.133333, 1 )
 
 [sub_resource type="StyleBoxTexture" id=5]
 content_margin_left = 64.0
 content_margin_right = 64.0
 content_margin_top = 64.0
 content_margin_bottom = 64.0
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_rect = Rect2( 0, 84, 256, 256 )
 margin_left = 128.0
 margin_right = 128.0
 margin_top = 128.0
 margin_bottom = 128.0
-modulate_color = Color( 0.705882, 0.360784, 0.764706, 1 )
+modulate_color = Color( 0.968627, 0.686275, 0.133333, 1 )
 
 [sub_resource type="StyleBoxTexture" id=6]
 content_margin_left = 64.0
 content_margin_right = 64.0
 content_margin_top = 64.0
 content_margin_bottom = 64.0
-texture = ExtResource( 2 )
+texture = ExtResource( 1 )
 region_rect = Rect2( 0, 84, 256, 256 )
 margin_left = 128.0
 margin_right = 128.0
 margin_top = 128.0
 margin_bottom = 128.0
-modulate_color = Color( 0.705882, 0.360784, 0.764706, 1 )
+modulate_color = Color( 0.968627, 0.686275, 0.133333, 1 )
 
-[node name="transmutation_list" type="ColorRect"]
+[node name="screen" type="ColorRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 7 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
 }
-header_title = "screen_title_tm_list"
-theme_color = Color( 0.705882, 0.360784, 0.764706, 1 )
+header_title = "screen_title_entity_list"
+theme_color = Color( 0.968627, 0.686275, 0.133333, 1 )
 
-[node name="data_view_node" parent="." instance=ExtResource( 9 )]
-data_node_name = "transmutations"
+[node name="data_view_node" parent="." instance=ExtResource( 6 )]
+data_node_name = "entities"
 data_node_name_from_parent_name = false
 start_from_root = true
 
@@ -113,13 +113,12 @@ __meta__ = {
 }
 
 [node name="collection_view" type="VBoxContainer" parent="scroll_container"]
+margin_right = 720.0
+size_flags_horizontal = 3
 custom_constants/separation = 0
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="collection_view_filler" parent="scroll_container/collection_view" instance=ExtResource( 8 )]
-collection_item = ExtResource( 1 )
+[node name="collection_view_filler" parent="scroll_container/collection_view" instance=ExtResource( 7 )]
+collection_item = ExtResource( 9 )
 end_padding = 240.0
 
 [node name="shadow" type="TextureRect" parent="."]
@@ -128,7 +127,7 @@ anchor_bottom = 1.0
 margin_right = 128.0
 margin_bottom = 2560.0
 rect_rotation = -89.9999
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 expand = true
 
 [node name="button_add" type="Button" parent="."]
@@ -142,12 +141,12 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
-icon = ExtResource( 3 )
+icon = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="theme_custom_class_override" parent="button_add" instance=ExtResource( 11 )]
+[node name="theme_custom_class_override" parent="button_add" instance=ExtResource( 8 )]
 theme_class = "FloatButton"
 theme_stylebox_overrides = [ "normal", "hover", "pressed" ]
 override_stylebox_color = true
@@ -166,7 +165,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="theme_custom_class_override" parent="button_search" instance=ExtResource( 11 )]
+[node name="theme_custom_class_override" parent="button_search" instance=ExtResource( 8 )]
 theme_class = "FloatButton"
 theme_stylebox_overrides = [ "normal", "hover", "pressed" ]
 override_stylebox_color = true

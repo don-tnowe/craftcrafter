@@ -4,6 +4,7 @@ extends Node
 var project_data := {
 	"entities": {
 			"crystal1": {
+				"id": "crystal1",
 				"name": "Crystal of Testing",
 				"visuals": {
 					"icon_path": "res://builtin_content/icons/minerals.svg",
@@ -11,9 +12,11 @@ var project_data := {
 				"step": 1.0,
 			},
 			"crystal2": {
+				"id": "crystal2",
 				"name": "Crystal of Idk",
 				"visuals": {
 					"icon_path": "res://builtin_content/icons/minerals.svg",
+					"bg": Color.violet,
 				},
 				"step": 0.0,
 			},

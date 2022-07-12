@@ -2,6 +2,7 @@ extends Node
 
 export(String) var data_node_name
 export(bool) var data_node_name_from_parent_name
+export(bool) var start_from_root
 
 var data_path : String
 var data_collection # Variant: Array or Dictionary
@@ -15,7 +16,7 @@ func _ready() -> void:
 	
 	while true:
 		cur_parent = cur_parent.get_parent()
-		if !is_instance_valid(cur_parent):
+		if start_from_root || !is_instance_valid(cur_parent):
 			data_path = ""
 			data_collection = DataController.project_data[data_node_name]
 			break
