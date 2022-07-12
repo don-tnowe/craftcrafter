@@ -2,6 +2,7 @@ class_name ScreenBase
 extends ColorRect
 
 signal returned_to_scene()
+signal scene_closed()
 
 export(String) var header_title = "screen_title_"
 export(Color) var theme_color = Color.darkgray
@@ -18,7 +19,7 @@ func open_screen(extra) -> void:
 
 
 func close_screen() -> void:
-	pass
+	emit_signal("scene_closed")
 
 
 func reopen_screen(closed_screen_result) -> void:
