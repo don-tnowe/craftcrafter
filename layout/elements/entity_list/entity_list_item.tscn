@@ -1,17 +1,15 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=1]
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=2]
 [ext_resource path="res://layout/elements/common/data_view/data_view_node.tscn" type="PackedScene" id=3]
 [ext_resource path="res://styles/icons/edit.tres" type="Texture" id=4]
-[ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=5]
 [ext_resource path="res://layout/elements/common/data_view/entity_icon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://layout/elements/common/data_view/basic_edit_value_button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scripts/elements/data_view/edit_value_line_edit.gd" type="Script" id=8]
 [ext_resource path="res://layout/elements/common/basic_action_button.tscn" type="PackedScene" id=9]
 [ext_resource path="res://layout/elements/common/data_view/data_view_leaf.tscn" type="PackedScene" id=10]
 
-[sub_resource type="StyleBoxTexture" id=36]
+[sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -24,7 +22,7 @@ margin_top = 32.0
 margin_bottom = 36.0
 modulate_color = Color( 0.688235, 0.679412, 0.679412, 1 )
 
-[sub_resource type="StyleBoxTexture" id=37]
+[sub_resource type="StyleBoxTexture" id=2]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -37,7 +35,7 @@ margin_top = 32.0
 margin_bottom = 36.0
 modulate_color = Color( 0.220588, 0.2, 0.2, 1 )
 
-[sub_resource type="StyleBoxTexture" id=38]
+[sub_resource type="StyleBoxTexture" id=3]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -50,9 +48,7 @@ margin_top = 32.0
 margin_bottom = 36.0
 modulate_color = Color( 0.75, 0.75, 0.75, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=35]
-
-[sub_resource type="StyleBoxTexture" id=39]
+[sub_resource type="StyleBoxTexture" id=4]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -65,7 +61,7 @@ margin_top = 32.0
 margin_bottom = 36.0
 modulate_color = Color( 0.688235, 0.679412, 0.679412, 1 )
 
-[sub_resource type="StyleBoxTexture" id=40]
+[sub_resource type="StyleBoxTexture" id=5]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -78,7 +74,7 @@ margin_top = 32.0
 margin_bottom = 36.0
 modulate_color = Color( 0.220588, 0.2, 0.2, 1 )
 
-[sub_resource type="StyleBoxTexture" id=41]
+[sub_resource type="StyleBoxTexture" id=6]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -91,7 +87,7 @@ margin_top = 32.0
 margin_bottom = 36.0
 modulate_color = Color( 0.75, 0.75, 0.75, 1 )
 
-[sub_resource type="StyleBoxTexture" id=42]
+[sub_resource type="StyleBoxTexture" id=7]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -104,7 +100,7 @@ margin_top = 32.0
 margin_bottom = 36.0
 modulate_color = Color( 0.688235, 0.679412, 0.679412, 1 )
 
-[sub_resource type="StyleBoxTexture" id=43]
+[sub_resource type="StyleBoxTexture" id=8]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -117,7 +113,7 @@ margin_top = 32.0
 margin_bottom = 36.0
 modulate_color = Color( 0.220588, 0.2, 0.2, 1 )
 
-[sub_resource type="StyleBoxTexture" id=44]
+[sub_resource type="StyleBoxTexture" id=9]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -158,9 +154,9 @@ margin_top = 20.0
 margin_right = 660.0
 margin_bottom = 176.0
 size_flags_horizontal = 3
-custom_styles/hover = SubResource( 36 )
-custom_styles/pressed = SubResource( 37 )
-custom_styles/normal = SubResource( 38 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 text = ""
 flat = true
 method_name = "_on_selected"
@@ -188,20 +184,11 @@ size_flags_horizontal = 3
 [node name="name" type="LineEdit" parent="margin_container/h_box_container/control"]
 anchor_right = 1.0
 margin_left = 8.0
-margin_bottom = 73.0
-mouse_filter = 2
+margin_bottom = 54.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 1 )
-custom_styles/read_only = SubResource( 35 )
 text = "Nameless Item"
-editable = false
 script = ExtResource( 8 )
 data_node_name = "name"
-
-[node name="theme_overrider" parent="margin_container/h_box_container/control/name" instance=ExtResource( 5 )]
-theme_class = "FlatLineEdit"
-theme_stylebox_overrides = [ "read_only" ]
-override_font = false
 
 [node name="data_view_leaf" parent="margin_container/h_box_container/control/name" instance=ExtResource( 10 )]
 
@@ -210,12 +197,12 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -92.0
-margin_right = -92.0
+margin_right = -95.0
 margin_bottom = 13.0
 size_flags_horizontal = 3
-custom_styles/hover = SubResource( 39 )
-custom_styles/pressed = SubResource( 40 )
-custom_styles/normal = SubResource( 41 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 text = "button_choose"
 method_name = "_on_selected"
 bind_name_of = NodePath("../../../..")
@@ -225,14 +212,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -92.0
+margin_left = -94.0
 margin_top = -92.0
 margin_right = 13.0
 margin_bottom = 13.0
 size_flags_horizontal = 3
-custom_styles/hover = SubResource( 42 )
-custom_styles/pressed = SubResource( 43 )
-custom_styles/normal = SubResource( 44 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
 text = ""
 icon = ExtResource( 4 )
 clip_text = false
