@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scripts/elements/data_view/edit_value_text_edit.gd" type="Script" id=1]
 [ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=2]
@@ -36,6 +36,84 @@ margin_bottom = 36.0
 modulate_color = Color( 0.220588, 0.2, 0.2, 1 )
 
 [sub_resource type="StyleBoxTexture" id=3]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.75, 0.75, 0.75, 1 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.688235, 0.679412, 0.679412, 1 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.220588, 0.2, 0.2, 1 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.75, 0.75, 0.75, 1 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.688235, 0.679412, 0.679412, 1 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.220588, 0.2, 0.2, 1 )
+
+[sub_resource type="StyleBoxTexture" id=9]
 content_margin_left = 24.0
 content_margin_right = 24.0
 content_margin_top = 24.0
@@ -203,3 +281,65 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 text = "button_delete"
 method_name = "delete"
+
+[node name="confirm_delete" type="ColorRect" parent="."]
+visible = false
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 700.0
+margin_bottom = 959.0
+color = Color( 0, 0, 0, 0.752941 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="timer" type="Timer" parent="confirm_delete"]
+wait_time = 2.0
+one_shot = true
+
+[node name="v_box_container" type="VBoxContainer" parent="confirm_delete"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -320.0
+margin_top = -185.5
+margin_right = 320.0
+margin_bottom = 137.5
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="label" type="Label" parent="confirm_delete/v_box_container"]
+margin_right = 640.0
+margin_bottom = 57.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "text_confirm_delete_"
+align = 1
+valign = 2
+autowrap = true
+
+[node name="cancel" parent="confirm_delete/v_box_container" instance=ExtResource( 3 )]
+margin_top = 69.0
+margin_right = 640.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 0, 137 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "button_cancel"
+method_name = "delete_confirm"
+method_binds = [ false ]
+
+[node name="delete" parent="confirm_delete/v_box_container" instance=ExtResource( 3 )]
+margin_top = 218.0
+margin_right = 640.0
+margin_bottom = 323.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+text = "button_delete"
+method_name = "delete_confirm"
+method_binds = [ true ]
+
+[connection signal="timeout" from="confirm_delete/timer" to="confirm_delete/v_box_container/delete" method="set_visible" binds= [ true ]]

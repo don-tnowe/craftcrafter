@@ -33,3 +33,24 @@ func save_changes() -> void:
 
 	if old_id != new_id:
 		DataController.change_id(old_id, new_id, root_collection_name)
+
+
+func delete() -> void:
+	$"confirm_delete".visible = true
+	$"confirm_delete/timer".start()
+	$"confirm_delete/v_box_container/delete".visible = false
+	$"confirm_delete/v_box_container/label".text = "text_confirm_delete_" + root_collection_name
+
+
+func delete_confirm(has_confirmed : bool) -> void:
+	$"confirm_delete".visible = false
+	if has_confirmed:
+		DataController.delete_id(old_id, root_collection_name)
+		var cur_parent = self
+		while is_instance_valid(cur_parent):
+			if cur_parent.has_method("go_back"):
+				cur_parent.go_back()
+				break
+				
+			cur_parent = cur_parent.get_parent()
+
