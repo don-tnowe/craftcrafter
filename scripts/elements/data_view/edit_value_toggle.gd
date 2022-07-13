@@ -5,8 +5,6 @@ export(String) var data_node_name
 export(Color) var enabled_color
 export(bool) var toggled_on := false setget set_toggled
 
-onready var node_peg := $"peg"
-
 var data_collection  # Variant: Array or Dictionary
 var screen : Control
 
@@ -19,7 +17,7 @@ func _ready() -> void:
 		if "theme_color" in cur_parent:
 			enabled_color = cur_parent.theme_color
 			if toggled_on:
-				node_peg.modulate = enabled_color
+				$"peg".modulate = enabled_color
 
 			break
 
@@ -42,5 +40,5 @@ func set_toggled(value : bool) -> void:
 	if !is_inside_tree():
 		return
 	
-	node_peg.rect_position.x = 53 if toggled_on else -11
-	node_peg.modulate = enabled_color if toggled_on else Color(0.9, 0.9, 0.9)
+	$"peg".rect_position.x = 53 if toggled_on else -11
+	$"peg".modulate = enabled_color if toggled_on else Color(0.9, 0.9, 0.9)
