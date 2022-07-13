@@ -1,11 +1,10 @@
 extends Node
 
-
-var data_view_node
+var data_view_node : Node
 var edit_format_found := false
 
 
-func _ready():
+func _ready() -> void:
 	var cur_parent = self
 	data_view_node = null
 	
@@ -28,5 +27,5 @@ func _ready():
 		cur_parent = cur_parent.get_parent()
 
 
-func load_data():
+func load_data() -> void:
 	get_parent().load_collection(data_view_node.data_collection)
