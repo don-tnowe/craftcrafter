@@ -1,6 +1,8 @@
 tool
 extends MarginContainer
 
+signal returned_to_scene()
+
 export(String, FILE, "*.tscn") var edit_screen
 export(Color) var theme_color setget set_theme_color
 export(String) var header_title setget set_header_title
@@ -27,6 +29,11 @@ func add_item() -> void:
 			break
 			
 		cur_parent = cur_parent.get_parent()
+
+
+func remove_item(key : String) -> void:
+	$"data_view_node".data_collection.remove(key.to_int())
+	emit_signal("returned_to_scene")
 
 
 func set_theme_color(value : Color) -> void:
