@@ -8,6 +8,8 @@ export(Color) var theme_color setget set_theme_color
 export(String) var header_title setget set_header_title
 export(Resource) var edit_format
 
+var new_collection
+
 
 func update_style() -> void:
 	$"v_box_container/color_rect".color = theme_color
@@ -19,8 +21,7 @@ func _ready() -> void:
 
 
 func add_item() -> void:
-	var new_collection = {"id": "", "min": 1, "max": 2}
-	$"data_view_node".data_collection.append(new_collection)
+	new_collection = {"min": 1, "max": 2}
 	
 	var cur_parent = self
 	while true:
@@ -34,6 +35,12 @@ func add_item() -> void:
 func remove_item(key : String) -> void:
 	$"data_view_node".data_collection.remove(key.to_int())
 	emit_signal("returned_to_scene")
+
+
+func load_collection(_collection) -> void:
+	if new_collection != null && new_collection.has("id"):
+		$"data_view_node".data_collection.append(new_collection)
+		new_collection = null
 
 
 func set_theme_color(value : Color) -> void:
