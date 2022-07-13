@@ -17,6 +17,7 @@ button_choose;;CHOOSE
 button_edit;;EDIT
 button_delete;;DELETE
 button_list_add;;ADD ITEM
+button_edit_icon;;EDIT ICON
 button_generate_tm_chart;;GENERATE CHART
 ;;
 tm_time_spent;;Time Spent
