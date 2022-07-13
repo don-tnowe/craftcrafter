@@ -6,5 +6,6 @@ func _on_pressed() -> void:
 	._on_pressed()
 
 
-func load_collection(collection):
+func load_collection(_collection) -> void:
+	# Nothing to load - this only creates.
 	pass

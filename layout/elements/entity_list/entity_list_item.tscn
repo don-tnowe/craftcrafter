@@ -1,14 +1,15 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=1]
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=2]
-[ext_resource path="res://layout/elements/common/data_view_node.tscn" type="PackedScene" id=3]
+[ext_resource path="res://layout/elements/common/data_view/data_view_node.tscn" type="PackedScene" id=3]
 [ext_resource path="res://styles/icons/edit.tres" type="Texture" id=4]
 [ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=5]
-[ext_resource path="res://layout/elements/common/entity_icon.tscn" type="PackedScene" id=6]
-[ext_resource path="res://layout/elements/common/basic_edit_value_button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://layout/elements/common/data_view/entity_icon.tscn" type="PackedScene" id=6]
+[ext_resource path="res://layout/elements/common/data_view/basic_edit_value_button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scripts/elements/data_view/edit_value_line_edit.gd" type="Script" id=8]
 [ext_resource path="res://layout/elements/common/basic_action_button.tscn" type="PackedScene" id=9]
+[ext_resource path="res://layout/elements/common/data_view/data_view_leaf.tscn" type="PackedScene" id=10]
 
 [sub_resource type="StyleBoxTexture" id=36]
 content_margin_left = 24.0
@@ -201,6 +202,8 @@ data_node_name = "name"
 theme_class = "FlatLineEdit"
 theme_stylebox_overrides = [ "read_only" ]
 override_font = false
+
+[node name="data_view_leaf" parent="margin_container/h_box_container/control/name" instance=ExtResource( 10 )]
 
 [node name="button_choose" parent="margin_container/h_box_container/control" instance=ExtResource( 9 )]
 anchor_top = 1.0

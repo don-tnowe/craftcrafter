@@ -46,6 +46,10 @@ config/icon="res://icon.png"
 
 DataController="*res://scripts/data_controller.gd"
 
+[debug]
+
+gdscript/warnings/return_value_discarded=false
+
 [display]
 
 window/size/width=720

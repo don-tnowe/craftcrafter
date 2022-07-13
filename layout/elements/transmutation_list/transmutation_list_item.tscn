@@ -4,28 +4,17 @@
 [ext_resource path="res://styles/icons/arrow.tres" type="Texture" id=2]
 [ext_resource path="res://styles/icons/time.tres" type="Texture" id=3]
 [ext_resource path="res://layout/elements/common/basic_screen_switch_button.tscn" type="PackedScene" id=4]
-[ext_resource path="res://layout/elements/common/edit_value_button.tscn" type="PackedScene" id=5]
-[ext_resource path="res://layout/elements/common/data_view_node.tscn" type="PackedScene" id=6]
-[ext_resource path="res://layout/elements/common/collection_view_filler.tscn" type="PackedScene" id=7]
+[ext_resource path="res://layout/elements/common/data_view/edit_value_button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://layout/elements/common/data_view/data_view_node.tscn" type="PackedScene" id=6]
+[ext_resource path="res://layout/elements/common/data_view/collection_view_filler.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scripts/elements/data_view/edit_value_button_time_range.gd" type="Script" id=8]
 [ext_resource path="res://scripts/transmutation_list_item_grid.gd" type="Script" id=9]
 [ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=10]
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=11]
-[ext_resource path="res://layout/elements/common/basic_edit_value_button.tscn" type="PackedScene" id=12]
+[ext_resource path="res://layout/elements/common/data_view/basic_edit_value_button.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scripts/value_edit_format.gd" type="Script" id=13]
 [ext_resource path="res://scripts/elements/data_view/edit_value_line_edit.gd" type="Script" id=14]
-
-[sub_resource type="StyleBoxTexture" id=32]
-content_margin_left = 8.0
-content_margin_right = 8.0
-content_margin_top = 8.0
-content_margin_bottom = 8.0
-texture = ExtResource( 11 )
-region_rect = Rect2( 214, 0, 64, 64 )
-margin_left = 16.0
-margin_right = 16.0
-margin_top = 16.0
-margin_bottom = 16.0
+[ext_resource path="res://layout/elements/common/data_view/data_view_leaf.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Resource" id=36]
 script = ExtResource( 13 )
@@ -33,6 +22,7 @@ screen_color = Color( 1, 0.141176, 0.219608, 1 )
 allow_negatives = false
 allow_infinity = false
 allow_fractions = true
+use_entity_step = true
 
 [sub_resource type="Resource" id=37]
 script = ExtResource( 13 )
@@ -40,6 +30,7 @@ screen_color = Color( 0.917647, 0.815686, 0.137255, 1 )
 allow_negatives = true
 allow_infinity = false
 allow_fractions = true
+use_entity_step = true
 
 [sub_resource type="Resource" id=38]
 script = ExtResource( 13 )
@@ -47,6 +38,7 @@ screen_color = Color( 0.27451, 0.866667, 0.203922, 1 )
 allow_negatives = true
 allow_infinity = true
 allow_fractions = true
+use_entity_step = true
 
 [sub_resource type="StyleBoxTexture" id=39]
 content_margin_left = 24.0
@@ -178,6 +170,8 @@ __meta__ = {
 }
 data_node_name = "name"
 
+[node name="data_view_leaf" parent="margin_container/v_box_container/name" instance=ExtResource( 15 )]
+
 [node name="time" type="HBoxContainer" parent="margin_container/v_box_container"]
 margin_top = 66.0
 margin_right = 638.0
@@ -214,10 +208,6 @@ __meta__ = {
 [node name="min" parent="margin_container/v_box_container/time" instance=ExtResource( 5 )]
 margin_left = 92.0
 margin_right = 340.0
-custom_styles/hover = SubResource( 32 )
-custom_styles/pressed = SubResource( 32 )
-custom_styles/disabled = SubResource( 32 )
-custom_styles/normal = SubResource( 32 )
 script = ExtResource( 8 )
 data_node_name = "min"
 edit_screen = "res://layout/screens/edit_value/edit_value_time_range.tscn"
@@ -241,10 +231,6 @@ __meta__ = {
 [node name="max" parent="margin_container/v_box_container/time" instance=ExtResource( 5 )]
 margin_left = 389.0
 margin_right = 638.0
-custom_styles/hover = SubResource( 32 )
-custom_styles/pressed = SubResource( 32 )
-custom_styles/disabled = SubResource( 32 )
-custom_styles/normal = SubResource( 32 )
 script = ExtResource( 8 )
 data_node_name = "max"
 edit_screen = "res://layout/screens/edit_value/edit_value_time_range.tscn"

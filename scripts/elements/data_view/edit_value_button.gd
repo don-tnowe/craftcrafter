@@ -10,30 +10,6 @@ var data_collection  # Variant: Array or Dictionary
 
 
 func _ready() -> void:
-	var cur_parent = self
-	data_collection = null
-	
-	while true:
-		cur_parent = cur_parent.get_parent()
-		if !is_instance_valid(cur_parent):
-			break
-		
-		if data_collection == null && cur_parent.has_node(@"data_view_node"):
-			load_collection(cur_parent.get_node(@"data_view_node").data_collection)
-		
-		if cur_parent.has_signal("returned_to_scene"):
-			cur_parent.connect("returned_to_scene", self, "load_collection", [data_collection])
-		
-		if edit_format == null && "edit_format" in cur_parent:
-			edit_format = cur_parent.edit_format
-		
-		if data_collection == null && "screen_extra_data" in cur_parent && cur_parent.screen_extra_data != null:
-			data_collection = cur_parent.screen_extra_data[0]
-		
-		if cur_parent.has_method("switch_screen"):
-			screen_switcher = cur_parent
-			break
-		
 	connect("pressed", self, "_on_pressed")
 
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/elements/data_view/edit_value_button.gd" type="Script" id=1]
 [ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=2]
 [ext_resource path="res://styles/themes/default_theme.tres" type="Theme" id=3]
 [ext_resource path="res://styles/fonts/body.tres" type="DynamicFont" id=4]
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=5]
+[ext_resource path="res://layout/elements/common/data_view/data_view_leaf.tscn" type="PackedScene" id=6]
 
 [sub_resource type="StyleBoxTexture" id=32]
 content_margin_left = 8.0
@@ -41,3 +42,5 @@ script = ExtResource( 1 )
 theme_class = "EditButton"
 theme_stylebox_overrides = [ "normal", "hover", "pressed", "disabled" ]
 theme_color_overrides = [ "font_color", "font_color_hover", "font_color_focus", "font_color_pressed", "font_color_disabled" ]
+
+[node name="data_view_leaf" parent="." instance=ExtResource( 6 )]

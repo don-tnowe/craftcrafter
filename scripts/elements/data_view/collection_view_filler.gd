@@ -4,12 +4,14 @@ extends Node
 export(PackedScene) var collection_item
 export(float) var end_padding = 0
 
-var data_collection
 var display_nodes := {}
 var padding_node : Control
 
 
 func reposition_in_parent() -> void:
+	if !is_instance_valid(get_parent()):
+		return
+		
 	if get_parent().has_node(@"data_view_node"):
 		get_parent().call_deferred("move_child", self, get_parent().get_node(@"data_view_node").get_position_in_parent() + 1)
 
@@ -19,17 +21,6 @@ func _ready() -> void:
 		get_tree().connect("tree_changed", self, "reposition_in_parent")
 		return
 		
-	var cur_parent = self
-	
-	while is_instance_valid(cur_parent):
-		if data_collection == null && cur_parent.has_node(@"data_view_node"):
-			load_collection(cur_parent.get_node(@"data_view_node").data_collection)
-			
-		if cur_parent.has_signal("returned_to_scene"):
-			cur_parent.connect("returned_to_scene", self, "load_collection", [data_collection])
-			
-		cur_parent = cur_parent.get_parent()
-		
 	if end_padding > 0:
 		padding_node = Control.new()
 		padding_node.rect_min_size.y = end_padding
@@ -38,12 +29,10 @@ func _ready() -> void:
 
 
 func load_collection(collection) -> void:
-	data_collection = collection
-		
 	if collection is Array:
 		while display_nodes.size() > collection.size():
 			var k = str(display_nodes.size() - 1)
-			display_nodes[k].queue_free()
+			display_nodes[k].free()
 			display_nodes.erase(k)
 			
 		while display_nodes.size() < collection.size():
@@ -52,7 +41,7 @@ func load_collection(collection) -> void:
 	else:
 		for k in display_nodes:
 			if !collection.has(k):
-				display_nodes[k].queue_free()
+				display_nodes[k].free()
 				display_nodes.erase(k)
 		
 		for k in collection:

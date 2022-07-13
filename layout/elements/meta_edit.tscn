@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/elements/data_view/edit_value_text_edit.gd" type="Script" id=1]
 [ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=2]
@@ -6,7 +6,8 @@
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=4]
 [ext_resource path="res://scripts/elements/data_view/edit_value_line_edit.gd" type="Script" id=5]
 [ext_resource path="res://scripts/elements/meta_edit.gd" type="Script" id=6]
-[ext_resource path="res://layout/elements/common/data_view_node.tscn" type="PackedScene" id=7]
+[ext_resource path="res://layout/elements/common/data_view/data_view_node.tscn" type="PackedScene" id=7]
+[ext_resource path="res://layout/elements/common/data_view/data_view_leaf.tscn" type="PackedScene" id=8]
 
 [sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 24.0
@@ -113,6 +114,8 @@ mouse_filter = 1
 script = ExtResource( 5 )
 data_node_name = "id"
 
+[node name="data_view_leaf" parent="v_box_container/id/v_box_container/line_edit" instance=ExtResource( 8 )]
+
 [node name="description" type="MarginContainer" parent="v_box_container"]
 margin_top = 240.0
 margin_right = 680.0
@@ -141,6 +144,8 @@ virtual_keyboard_enabled = false
 script = ExtResource( 1 )
 data_node_name = "description"
 
+[node name="data_view_leaf" parent="v_box_container/description/v_box_container/text_edit" instance=ExtResource( 8 )]
+
 [node name="notes" type="MarginContainer" parent="v_box_container"]
 margin_top = 492.0
 margin_right = 680.0
@@ -168,6 +173,8 @@ mouse_filter = 1
 virtual_keyboard_enabled = false
 script = ExtResource( 1 )
 data_node_name = "notes"
+
+[node name="data_view_leaf" parent="v_box_container/notes/v_box_container/text_edit" instance=ExtResource( 8 )]
 
 [node name="delete" type="MarginContainer" parent="v_box_container"]
 margin_top = 744.0

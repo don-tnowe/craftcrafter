@@ -5,8 +5,8 @@
 [ext_resource path="res://styles/elements/shadow_gradient.tres" type="Texture" id=3]
 [ext_resource path="res://styles/icons/search.tres" type="Texture" id=4]
 [ext_resource path="res://layout/elements/create_float_button.tscn" type="PackedScene" id=5]
-[ext_resource path="res://layout/elements/common/data_view_node.tscn" type="PackedScene" id=6]
-[ext_resource path="res://layout/elements/common/collection_view_filler.tscn" type="PackedScene" id=7]
+[ext_resource path="res://layout/elements/common/data_view/data_view_node.tscn" type="PackedScene" id=6]
+[ext_resource path="res://layout/elements/common/data_view/collection_view_filler.tscn" type="PackedScene" id=7]
 [ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=8]
 [ext_resource path="res://layout/elements/entity_list/entity_list_item.tscn" type="PackedScene" id=9]
 

@@ -16,19 +16,12 @@ func _ready() -> void:
 	connect("pressed", self, "_on_pressed")
 
 	while is_instance_valid(cur_parent):
-		if data_collection == null && cur_parent.has_node(@"data_view_node"):
-			load_collection(cur_parent.get_node(@"data_view_node").data_collection)
-
-		if cur_parent.has_signal("returned_to_scene"):
-			if data_collection == null:
-				load_collection(cur_parent.screen_extra_data[0])
-
-			cur_parent.connect("returned_to_scene", self, "load_collection", [data_collection])
-
 		if "theme_color" in cur_parent:
 			enabled_color = cur_parent.theme_color
 			if toggled_on:
 				node_peg.modulate = enabled_color
+
+			break
 
 		cur_parent = cur_parent.get_parent()
 
