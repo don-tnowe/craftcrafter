@@ -1,12 +1,16 @@
 extends LineEdit
 
 export(String) var data_node_name
+export(int, "Never", "Always", "If Empty") var focus_on_start = 0
 
 var data_collection  # Variant: Array or Dictionary
 
 
 func _ready() -> void:
 	connect("text_changed", self, "_on_text_changed")
+	if focus_on_start == 1 || focus_on_start == 2 && text == "":
+		call_deferred("grab_focus")
+			
 
 
 func load_collection(collection) -> void:
