@@ -3,9 +3,11 @@ extends Node
 
 export(PackedScene) var collection_item
 export(float) var end_padding = 0
+export(String) var sorting_key = ""
 
 var display_nodes := {}
 var padding_node : Control
+var data_collection
 
 
 func reposition_in_parent() -> void:
@@ -29,7 +31,11 @@ func _ready() -> void:
 
 
 func load_collection(collection) -> void:
+	data_collection = collection
+	var collection_keys
+
 	if collection is Array:
+		collection_keys = range(collection.size())
 		while display_nodes.size() > collection.size():
 			var k = str(display_nodes.size() - 1)
 			display_nodes[k].free()
@@ -39,6 +45,7 @@ func load_collection(collection) -> void:
 			create_item(str(display_nodes.size()))
 	
 	else:
+		collection_keys = collection.keys()
 		for k in display_nodes:
 			if !collection.has(k):
 				display_nodes[k].free()
@@ -48,8 +55,15 @@ func load_collection(collection) -> void:
 			if !display_nodes.has(k):
 				create_item(k)
 				
+	yield(get_tree(), "idle_frame")
+	
+	if sorting_key != "":
+		collection_keys.sort_custom(self, "custom_sorting")
+		for x in collection_keys:
+			display_nodes[x].raise()
+		
 	if padding_node != null:
-		get_parent().call_deferred("move_child", padding_node, get_parent().get_child_count())
+		padding_node.raise()
 
 
 func create_item(key : String) -> void:
@@ -57,3 +71,7 @@ func create_item(key : String) -> void:
 	new_item.name = key
 	display_nodes[key] = new_item
 	get_parent().call_deferred("add_child", new_item)
+
+
+func custom_sorting(a : String, b : String) -> bool:
+	return data_collection[a][sorting_key].nocasecmp_to(data_collection[b][sorting_key]) < 0
