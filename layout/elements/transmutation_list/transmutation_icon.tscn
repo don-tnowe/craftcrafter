@@ -1,9 +1,24 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://layout/elements/common/data_view/edit_value_button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://layout/elements/common/data_view/entity_icon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/elements/data_view/edit_value_button_mono_range.gd" type="Script" id=3]
 [ext_resource path="res://layout/elements/common/data_view/data_view_node.tscn" type="PackedScene" id=4]
+[ext_resource path="res://styles/elements/Elements.png" type="Texture" id=5]
+[ext_resource path="res://scripts/elements/data_view/edit_value_button.gd" type="Script" id=7]
+[ext_resource path="res://layout/elements/common/data_view/data_view_leaf.tscn" type="PackedScene" id=9]
+
+[sub_resource type="StyleBoxTexture" id=32]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+texture = ExtResource( 5 )
+region_rect = Rect2( 214, 0, 64, 64 )
+margin_left = 16.0
+margin_right = 16.0
+margin_top = 16.0
+margin_bottom = 16.0
 
 [node name="entity" type="Control"]
 margin_right = 112.0
@@ -19,12 +34,30 @@ margin_top = 8.0
 margin_right = 96.0
 margin_bottom = 88.0
 
+[node name="change_button" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -40.0
+rect_pivot_offset = Vector2( -260, -78 )
+mouse_filter = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+flat = true
+clip_text = true
+script = ExtResource( 7 )
+edit_screen = "res://layout/screens/entity_list.tscn"
+
+[node name="data_view_leaf" parent="change_button" instance=ExtResource( 9 )]
+
 [node name="value" parent="." instance=ExtResource( 1 )]
 margin_left = 8.0
 margin_top = 96.0
 margin_bottom = 150.0
 grow_horizontal = 2
 rect_scale = Vector2( 0.75, 0.75 )
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 32 )
+custom_styles/disabled = SubResource( 32 )
+custom_styles/normal = SubResource( 32 )
 text = "122"
 align = 1
 script = ExtResource( 3 )
