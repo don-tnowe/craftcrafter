@@ -7,6 +7,7 @@ screen_title_tm_list;;Transmutations
 screen_title_edit_tm;;Edit Transmutation
 screen_title_entity_list;;Entities in Project
 screen_title_edit_entity;;Edit Entity
+screen_title_edit_icon;;Icon Designer
 screen_title_tm_tree;;Transmutation Chart
 screen_title_edit_value;;Input Value
 ;;
@@ -32,6 +33,10 @@ entity_color2;;Background Color
 entity_color3;;Background Color 2
 ;;
 edit_property_step;;Step
+edit_icon_image;;IMAGE
+edit_icon_front;All caps.;FRONT
+edit_icon_back;;BACK
+edit_icon_back2;;BACK 2
 ;;
 meta_title;;Additional Information
 meta_name;;Name

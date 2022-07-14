@@ -1,0 +1,18 @@
+[gd_scene format=2]
+
+[node name="color" type="TextureButton"]
+show_behind_parent = true
+margin_right = 40.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand = true
+
+[node name="color" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 6.0
+margin_right = -6.0
+margin_bottom = -6.0
+mouse_filter = 2

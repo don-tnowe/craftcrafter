@@ -193,10 +193,6 @@ margin_left = 10.0
 margin_top = -96.0
 margin_bottom = 9.0
 
-[node name="data_view_node" parent="scroll_container/v_box_container/margin_container/margin_container/v_box_container/h_box_container/control/control" instance=ExtResource( 10 )]
-data_node_name = "visuals"
-data_node_name_from_parent_name = false
-
 [node name="button_edit" parent="scroll_container/v_box_container/margin_container/margin_container/v_box_container/h_box_container/control/control" instance=ExtResource( 12 )]
 anchor_right = 1.0
 anchor_bottom = 1.0
