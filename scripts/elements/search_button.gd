@@ -16,6 +16,7 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	toggled_on = !toggled_on
+	$"button_search".self_modulate = Color.darkgray if toggled_on else Color.white
 	$"search_box".visible = toggled_on
 	if toggled_on:
 		node_line_edit.grab_focus()
@@ -32,6 +33,12 @@ func _on_text_changed(new_text : String) -> void:
 		node_reload_collection.display_nodes[k].visible = (
 			any_key_found(displayed_collection[str(k)], new_text)
 			|| new_text == "")
+
+
+func _on_clear() -> void:
+	_on_text_changed("")
+	node_line_edit.text = ""
+	_on_pressed()
 
 
 func any_key_found(item, filter_string : String) -> bool:

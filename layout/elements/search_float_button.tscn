@@ -1,25 +1,54 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://styles/elements/Elements.png" type="Texture" id=1]
 [ext_resource path="res://scripts/elements/search_button.gd" type="Script" id=2]
 [ext_resource path="res://styles/icons/search.tres" type="Texture" id=3]
 [ext_resource path="res://layout/elements/common/theme_overrider.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/elements/common/action_button.gd" type="Script" id=5]
+[ext_resource path="res://styles/fonts/title.tres" type="DynamicFont" id=6]
+[ext_resource path="res://layout/elements/common/basic_action_button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://styles/icons/remove.tres" type="Texture" id=8]
 
 [sub_resource type="StyleBoxTexture" id=1]
-content_margin_left = 64.0
-content_margin_right = 64.0
-content_margin_top = 64.0
-content_margin_bottom = 64.0
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
 texture = ExtResource( 1 )
-region_rect = Rect2( 0, 84, 256, 256 )
-margin_left = 128.0
-margin_right = 128.0
-margin_top = 128.0
-margin_bottom = 128.0
-modulate_color = Color( 0.75, 0.75, 0.75, 1 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.688235, 0.679412, 0.679412, 1 )
 
 [sub_resource type="StyleBoxTexture" id=2]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.220588, 0.2, 0.2, 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 24.0
+content_margin_bottom = 24.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 86, 84 )
+margin_left = 52.0
+margin_right = 52.0
+margin_top = 32.0
+margin_bottom = 36.0
+modulate_color = Color( 0.75, 0.75, 0.75, 1 )
+
+[sub_resource type="StyleBoxTexture" id=4]
 content_margin_left = 64.0
 content_margin_right = 64.0
 content_margin_top = 64.0
@@ -32,7 +61,20 @@ margin_top = 128.0
 margin_bottom = 128.0
 modulate_color = Color( 0.75, 0.75, 0.75, 1 )
 
-[sub_resource type="StyleBoxTexture" id=3]
+[sub_resource type="StyleBoxTexture" id=5]
+content_margin_left = 64.0
+content_margin_right = 64.0
+content_margin_top = 64.0
+content_margin_bottom = 64.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 84, 256, 256 )
+margin_left = 128.0
+margin_right = 128.0
+margin_top = 128.0
+margin_bottom = 128.0
+modulate_color = Color( 0.75, 0.75, 0.75, 1 )
+
+[sub_resource type="StyleBoxTexture" id=6]
 content_margin_left = 64.0
 content_margin_right = 64.0
 content_margin_top = 64.0
@@ -60,6 +102,16 @@ anchor_right = 1.0
 margin_bottom = 172.0
 color = Color( 0, 0, 0, 0.498039 )
 
+[node name="label" type="Label" parent="search_box"]
+margin_left = 20.0
+margin_top = 26.0
+margin_right = 700.0
+margin_bottom = 83.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "label_search"
+align = 1
+
 [node name="margin_container" type="MarginContainer" parent="search_box"]
 anchor_top = 1.0
 anchor_right = 1.0
@@ -79,7 +131,19 @@ margin_left = 20.0
 margin_top = 20.0
 margin_right = 700.0
 margin_bottom = 74.0
-clear_button_enabled = true
+
+[node name="button" parent="search_box/margin_container/line_edit" instance=ExtResource( 7 )]
+margin_left = 556.0
+margin_top = -42.0
+margin_right = 700.0
+margin_bottom = 102.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = ""
+icon = ExtResource( 8 )
+expand_icon = true
+method_name = "_on_clear"
 
 [node name="button_search" type="Button" parent="."]
 anchor_top = 1.0
@@ -87,9 +151,9 @@ anchor_bottom = 1.0
 margin_top = -256.0
 margin_right = 256.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 icon = ExtResource( 3 )
 script = ExtResource( 5 )
 __meta__ = {
