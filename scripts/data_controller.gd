@@ -107,6 +107,8 @@ var project_data := {
 	},
 }
 
+var icon_paths := {}
+
 
 func get_data_from_path(path : String):
 	var path_split = path.split("/")
@@ -139,6 +141,13 @@ func create_empty_item(for_collection : String) -> Dictionary:
 			"consumed": [],
 			"produced": [],
 			"catalysts": [],
+		}
+
+	if for_collection == "icons":
+		return {
+			"name": "",
+			"contributor": "",
+			"filepath": "",
 		}
 
 	return {}
@@ -220,3 +229,20 @@ func delete_id(id : String, from_collection : String) -> void:
 			for en in copy:
 				if en["id"] == id:
 					value["catalysts"].erase(en)
+
+
+func load_icon(path : String) -> Resource:
+	if ResourceLoader.exists(path):
+		return load(path)
+
+	var img = Image.new()
+	if img.load(path) != OK:
+		return null
+		
+	var img_tex = ImageTexture.new()
+	img_tex.create_from_image(img)
+	img_tex.take_over_path(path)
+
+	return img_tex
+					
+					

@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/elements/common/action_button.gd" type="Script" id=1]
+[ext_resource path="res://builtin_content/icons/checker.png" type="Texture" id=3]
+
+[node name="control" type="Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -656.0
+margin_bottom = -874.0
+mouse_filter = 1
+size_flags_horizontal = 3
+flat = true
+script = ExtResource( 1 )
+method_name = "_on_icon_selected"
+bind_name_of = NodePath(".")
+
+[node name="bg" type="ColorRect" parent="."]
+self_modulate = Color( 0.0901961, 0.117647, 0.403922, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="icon" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1

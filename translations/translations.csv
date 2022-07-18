@@ -61,8 +61,18 @@ tm_chart_values_worst;;Worst Case
 tm_chart_values_average;;Best-Worst Average
 ;;
 label_search;;Search
+label_downloading;;Downloading...
 ;;
 text_confirm_delete_entities;;Really delete? This removes the entity in every transmutation it's in!
 text_confirm_delete_transmutations;;Really delete transmutation?
+text_game_icons_net;;"Icons here are fetched from the web:
+
+https://game-icons.net
+
+These icons are provided for free under the Creative Commons 3 Attribution license.
+
+If you use these in a game, credit the authors!
+
+Icons downloaded are stored on your device in the app's local data once you open a tab first. You can then use them without Internet connection."
 ;;
 ;;

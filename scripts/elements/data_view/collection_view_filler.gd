@@ -58,7 +58,12 @@ func load_collection(collection) -> void:
 	yield(get_tree(), "idle_frame")
 	
 	if sorting_key != "":
-		collection_keys.sort_custom(self, "custom_sorting")
+		if sorting_key != "#":
+			collection_keys.sort_custom(self, "custom_sorting")
+		
+		else:
+			collection_keys.sort()
+			
 		for x in collection_keys:
 			display_nodes[x].raise()
 		
